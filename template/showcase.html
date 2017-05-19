@@ -1,0 +1,18 @@
+<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix pad0' id='profile' style='padding-top:0px;'>
+	<div class="clearfix showcaseBg" style="padding: 150px 0px;">
+		<h1 class='section-header' style='text-align:center;'>Showcase</h1>
+	</div>
+	<div class='container' style='text-align:center;'>
+		<a class='btn btn-custom' ng-click='showcase=1' ng-class='{selected:showcase==1}'>PHOTOS</a>
+		<a class='btn btn-custom' ng-click='showcase=2' ng-class='{selected:showcase==2}'>CINEMAS</a>
+	</div>
+</div>
+<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 gallery-bg' id='artboard'>
+	
+</div>
+<div id='photos' class='col-lg-12 clearfix' style="padding-right: 0px" ng-if='showcase==1'>
+	<div class='col-lg-3 col-md-3 col-sm-6 col-xs-6 pic-holder-p p6' id='sc1' ng-click='showCat(1, [2,3,4])'><div class='softbox'>PRE WEDDING<br><span>[ memories ]</span></div></div>
+	<div class='col-lg-3 col-md-3 col-sm-6 col-xs-6 pic-holder-p p8' id='sc2' ng-click='showCat(2, [1,3,4])'><div class='softbox'>BRIDE & GROOM<br><span>[ memories ]</span></div></div>
+	<div class='col-lg-3 col-md-3 col-sm-6 col-xs-6 pic-holder-p p7' id='sc3' ng-click='showCat(3, [1,2,4])'><div class='softbox'>SANGEET<br><span>[ memories ]</span></div></div>
+	<div class='col-lg-3 col-md-3 col-sm-6 col-xs-6 pic-holder-p p5' id='sc4' ng-click='showCat(4, [1,2,3])'><div class='softbox'>WEDDING<br><span>[ memories ]</span></div></div>			
+</div>

@@ -1,0 +1,46 @@
+<div class='col-lg-12 clearfix' id='packages'>
+	<h1 class='section-header'>Packages</h1>
+	<div class='container'>
+		<div class='para'>
+			<p>Our packages are designed to meet all of your different needs and we are confident that with the available options
+			at Wishtree Cinemas you will find the service you are looking for. Should you have any question regarding the packages
+			feel free give us a call to discuss over.
+			</p>
+	
+			<div class='clearfix text-center'>
+				<a class='btn btn-custom' id='pkg-1' ng-click="setPhotoPkg()">PHOTO<br><span>PACKAGES</span></a>
+				<a class='btn btn-custom' id='pkg-2' ng-click="setVideoPkg()">CINEMA<br><span>PACKAGES</span></a>					
+			</div>
+			<div class='package-card front' >
+				<h3 style='text-align:center;' ng-bind='pkg.title'></h3>
+				
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix" id='pkgPane'>
+					<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" style="border-right: 1px solid #947042;">
+						<div ng-repeat='(key,value) in pkg.packageNames' class="clearfix">
+							<h3>{{key}}</h5>
+							<ul class='packageNames'>
+								<li ng-repeat='v in value' ng-click='showPkg(key,v)' class='pkgType' id={{key+v}} ng-class="{active: currentSelection === key+v }">{{v}}</li>
+							</ul>
+						</div>	
+					</div>	
+					<div class="col-lg-9 col-md-8 col-sm-8 col-xs-12" >
+
+						<ul class="{{'brd-'+pkgName}}" style='padding-top:20px;margin-right:40px;'>
+							<li class="" ng-repeat='d in pkgDetail'>{{d}}</li>	
+
+						</ul>
+					</div>
+					<div class="right-color-bar {{'pck-'+pkgName}}">
+						<h3 class='pkgDetail'>{{pkgName}}<br><span style='opacity:.7;font-size:60%'>{{pkgCategory}}</span></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div class='row'>
+		<p style='text-align:center'>
+			<img src='img\logo\\wishtree.png'/>
+		</p>
+	</div>	
+</div>
+		
