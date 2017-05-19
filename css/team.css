@@ -1,6 +1,6 @@
 .team-holder{
 	
-	height: 350px;
+	height: 270px;
 	width:100%;
 	margin: 10px;
 	background-color:#482d1b;		
@@ -8,6 +8,11 @@
 	position:relative;
 	transition:all .5s ease;
 	-webkit-transition:all .5s ease;
+}
+@media (min-width:1200px){
+	.team-holder{
+		height:300px;
+	}
 }
 .team-holder:hover>.team-pic-holder{
 	background-size:200%;
@@ -72,4 +77,28 @@
 	opacity: .8;
 	top: 0;
 
+}
+
+
+.team-holder-box{
+	display: block;
+	position: relative;
+	margin-bottom: 20px;
+	background-color: #fff;
+	padding: 10px;
+	opacity: .95;
+}
+
+.team-pic-holder-box{
+	outline:1px solid #ccc;
+	background-size:cover;
+	background-repeat:no-repeat;
+	height: 150px;
+	overflow: hidden;
+	background-position:top;
+	transition: background-size 0.5s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-moz-transition: background-size 0.5s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-ms-transition: background-size 0.5s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-o-transition: background-size 0.5s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-webkit-transition: background-size 0.5s cubic-bezier(0.06, 0.39, 0.43, 0.71);
 }

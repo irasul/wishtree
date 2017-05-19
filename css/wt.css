@@ -66,7 +66,7 @@
 	width:100%;
 	cursor:pointer;
 }
-h1,.team-holder:after{font-family: 'Roboto Slab', serif;}
+h1{font-family: 'Roboto Slab', serif;}
 span.spf{font-family: 'Roboto Slab', serif;}
 .spf{
 	font-family: 'Fredericka the Great', cursive;
@@ -384,17 +384,6 @@ hr{
 }
 .addedHeight{
 	margin-top:100px;
-}
-.t1{background-image:url(../img/team/s.jpg)}
-.t2{background-image:url(../img/team/y.jpg)}
-.t3{background-image:url(../img/team/a.jpg)}
-.t4{background-image:url(../img/team/m.jpg)}
-.t5{background-image:url(../img/team/i.jpg)}
-
-@media (min-width:767px){
-	.team-holder{
-		height:360px;
-	}
 }
 
 #menu{background-color:#fff;}
