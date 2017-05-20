@@ -40,6 +40,7 @@ app.controller('ctrl',['$scope','packages','teamSvc','$timeout', function($scope
 	$scope.showModal = false;
 	$scope.viewImage = false;
 	$scope.imgAry = [];
+
 	for(var i =1;i<34;i++){$scope.imgAry.push(i);}
 	$scope.scroll = function(id,offset){
 		offset = offset || ($(id).offset().top-72);
@@ -50,6 +51,15 @@ app.controller('ctrl',['$scope','packages','teamSvc','$timeout', function($scope
 		$scope.scroll('#pic-canvas','0px')
 	}
 
+	$scope.closeGallery = function(){
+		$('#artboard').slideUp();
+	}
+
+	$scope.setPV = function(index){
+
+		$scope.showcase=index;
+		$scope.$apply()
+	}
 	$scope.loadImg = function(i){
 		$("#lrg-image").css('background-image',"url(SiteGallery/wt-"+i+".jpg)");
 		$scope.viewImage = true;
@@ -57,7 +67,7 @@ app.controller('ctrl',['$scope','packages','teamSvc','$timeout', function($scope
 
 	$scope.pkg = packages.photo;
 	$scope.teamMembers = teamSvc.members;
-
+	
 
 }]);
 
@@ -66,9 +76,10 @@ app.directive('pkgManager',function(){
 	return{
 		restrict: 'A',
 		templateUrl: 'template/packages.html',
-		controller: function($scope,$timeout,packages){
+		controller: function($scope,$timeout,packages,gallerySvc){
 
 			//$scope.pkg = packages.photo;
+			
 			$scope.showPkg = function(pkgCategory, pkgName){
 				$('#pkgPane').addClass('rotate');
 				$(".pkgType").removeClass('active');
@@ -109,9 +120,14 @@ app.directive('pkgManager',function(){
 				
 			}
 			
-			$scope.showCat = function(a){
+			$scope.setCat = function(a){
+				gallerySvc.setActiveGallery(a);
+				$scope.setShowcaseGallery = gallerySvc.getPics();
+				$scope.activeGalleryTtle = gallerySvc.getTitle();
 				$('#artboard').slideDown();
+
 			}
+
 			
 			$scope.activateButton(1,2);
 			$scope.setPhotoPkg();

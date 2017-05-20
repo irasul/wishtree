@@ -1,0 +1,19 @@
+#artboard{
+	height:auto;
+	display:none;
+}
+#gallery-list{
+	margin: 0px auto;
+	margin-bottom: 20;
+	height: auto;	
+	position: relative;
+	text-align: center;
+}
+
+.example-image-link>img{
+  width: auto;
+  height: 100px;
+  zoom:1;
+  padding: 3px;
+  overflow: auto;
+}
