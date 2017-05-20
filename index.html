@@ -5,6 +5,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 <script src="js/wt.js"></script>
+<script src="js/rollerSvc.js"></script>
 <script src="js/teamSvc.js"></script>
 <script src="js/packageSvc.js"></script>
 <script src="js/gallerySvc.js"></script>
@@ -25,48 +26,10 @@
 <link rel='stylesheet' href='css/gallery.css'/>
 </head>
 <body ng-app='app' ng-controller='ctrl'>
-	<!--<div class='modal' ng-class='{active:showModal}'></div>
-	<div class='modalBox text-center;' ng-class='{active:showModal}'>
-		<div class='row text-center bb4'><a class='btn btn-custom3 b4' ng-click='showModal=false'>Close Gallery</a></div>
-		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 gallery'>
-			<div class='col-lg-3 col-md-3 col-sm-6 col-xs-6'>
-				<a ng-repeat="i in imgAry" class="example-image-link" href="SiteGallery/wt-{{i}}.jpg" 
-					data-lightbox="example-set" data-title="WishTree Cinemas">
-					<img class="example-image" src="SiteGallery_thumb/wt-{{i}}.jpg" alt=""/>
-				</a>
-			</div>
-			<div class='col-lg-3 col-md-3 col-sm-6 col-xs-6'>
-				<a ng-repeat="i in imgAry" class="example-image-link" href="SiteGallery/wt-{{i+33}}.jpg" 
-					data-lightbox="example-set" data-title="WishTree Cinemas">
-					<img class="example-image" src="SiteGallery_thumb/wt-{{i+33}}.jpg" alt=""/>
-				</a>
-			</div>
-			<div class='col-lg-3 col-md-3 col-sm-6 col-xs-6'>
-				<a ng-repeat="i in imgAry" class="example-image-link" href="SiteGallery/wt-{{i+65}}.jpg" 
-					data-lightbox="example-set" data-title="WishTree Cinemas">
-					<img class="example-image" src="SiteGallery_thumb/wt-{{i+65}}.jpg" alt=""/>
-				</a>
-			</div>
-			<div class='col-lg-3 col-md-3 col-sm-6 col-xs-6'>
-				<a ng-repeat="i in imgAry" class="example-image-link" href="SiteGallery/wt-{{i+99}}.jpg" 
-					data-lightbox="example-set" data-title="WishTree Cinemas">
-					<img class="example-image" src="SiteGallery_thumb/wt-{{i+99}}.jpg" alt=""/>
-				</a>
-			</div>
-		</div>
-		<div class='row text-center bb4'><a class='btn btn-custom3 b4' ng-click='showModal=false'>Close Gallery</a></div>				
-	</div> 
-	<div class='modal text-center'  ng-class="{active:viewImage}"></div>
-	<div id='lrg-image' ng-class="{active:viewImage}" ng-click='viewImage=false'></div>
-
-	-->
-	<!--<section ng-controller='pic-roller' style='position:relative;height:100%;background-color:transparent' id='pic-canvas'>
-		<div ng-repeat='bg in bgs' class='row canvas' ng-class='{active:currentBG==bg}' id='mainPic{{bg}}' ng-init='fn()'></div>
-	</section>-->
 	<div class='go-down'><img ng-click="scroll('#about')" src='img/menu/go-down.png'/></div>
 	<section ng-controller='pic-roller'>
 		<ul style='margin:0px;padding:0px;position:relative;height:100%;'>
-			<li class='li-canvas' ng-repeat="bg in bgs" id="mainPic{{bg}}" ><li>
+			<li class='li-canvas' ng-repeat="bg in bgs track by $index" style="background-image: url({{bg}});" id="mainPic{{$index}}" ><li>
 		</ul>
 	</section>
 	<nav class='nav navbar' id='menu'>

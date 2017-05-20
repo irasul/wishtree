@@ -86,6 +86,7 @@ h1.section-header{
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-color:#000;
+	background-position: center;
 	position: absolute;
 	height:100%;
 	width:100%;
@@ -98,16 +99,16 @@ h1.section-header{
     transition: opacity .5s ease;
 }
 @media (min-width:992px){
-	background-position: center;
+	/*background-position: center;*/
 }
 .li-canvas.active{
 	opacity:1;
 }
-#mainPic1{	background-image:url(../img/roll/wt-1.jpg);}
-#mainPic2{	background-image:url(../img/roll/wt-2.jpg);}
-#mainPic3{	background-image:url(../img/roll/wt-3.jpg);}
-#mainPic4{	background-image:url(../img/roll/wt-4.jpg);}
-#mainPic5{	background-image:url(../img/roll/wt-5.jpg);}
+/*#mainPic1{	background-image:url(../img/roll/wt-1.jpg);}*/
+/*#mainPic2{	background-image:url(../img/roll/wt-2.jpg);}*/
+/*#mainPic3{	background-image:url(../img/roll/wt-3.jpg);}*/
+/*#mainPic4{	background-image:url(../img/roll/wt-4.jpg);}*/
+/*#mainPic5{	background-image:url(../img/roll/wt-5.jpg);}*/
 
 
 #about{

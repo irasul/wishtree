@@ -137,15 +137,15 @@ app.directive('pkgManager',function(){
 
 });
 
-app.controller('pic-roller',['$scope','$interval',function($scope,$interval){
+app.controller('pic-roller',['$scope','$interval','rollerSvc',function($scope,$interval,rollerSvc){
 	const s = $scope;
-	s.bgs = [1,2,3,4,5];
-	s.currentBG = 1;
-	setTimeout(function(){$('#mainPic1').addClass('active')});
+	s.bgs = rollerSvc.bgs;
+	s.currentBG = 0;
+	setTimeout(function(){$('#mainPic'+s.currentBG).addClass('active')});
 	
 	$interval(function(){
 		const prevBG = s.currentBG;
-		s.currentBG = s.currentBG+1>s.bgs.length?1:s.currentBG+1;
+		s.currentBG = s.currentBG+1>s.bgs.length-1?0:s.currentBG+1;
 		$('#mainPic'+s.currentBG).addClass('active')
 		$('#mainPic'+prevBG).removeClass('active'); 
 	},5000)
