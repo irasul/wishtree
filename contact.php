@@ -10,7 +10,7 @@
     $eventDate=$data["eventDate"];
     $message=$data["body"];
     
-    if ( !(($bname=="")||($gname=="")||($message=="") || ($email=="") || ($phone==""))) {
+    if ( ($bname=="")||($gname=="")||($message=="") || ($email=="") || ($phone=="")) {
             echo "{data :{success: false, msg:'Please complete the mandatory fileds.' }}";
     }
     else {        
