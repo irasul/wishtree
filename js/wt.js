@@ -8,7 +8,7 @@ window.showMenu = function(){
 	var scrolltop = $(this).scrollTop();
 	
 	if(scrolltop >= window.navOffsetTop) {
-	  $('#menu').addClass('navbar-fixed-top');
+	  angular.element('#menu').addClass('navbar-fixed-top');
 	  $('#postMenu').addClass('addedHeight');
 	}
 	else {
@@ -34,13 +34,46 @@ $(document).ready(function(){
 });
 var app = angular.module('app',[]);
 
-app.controller('ctrl',['$scope','packages','teamSvc','$timeout', function($scope,packages,teamSvc,$timeout){
+app.controller('ctrl',['$scope','$http','packages','teamSvc','$timeout', function($scope,$http,packages,teamSvc,$timeout){
 	$scope.mobile = window.mobilecheck();
 	$scope.showcase = 1;
 	$scope.showModal = false;
 	$scope.viewImage = false;
 	$scope.imgAry = [];
 
+	$scope.email = {
+		"brideName":"Eli",
+		"groomName":"Ifty",
+		"email":"iftakhar.rasul@gmail.com",
+		"phone":"6478865431",
+		"eventDate":"5/5/2018",
+		"body":"My msg"
+	}
+
+	$scope.sendEmail = function(){
+		$.ajax({
+	        type: "POST",
+	        data: {data:$scope.email},
+	        url: "contact.php",
+	        success: function(response){
+	        	const data = JSON.parse(JSON.stringify(eval("(" + response + ")"))).data;
+	        	alert(data.msg);
+
+	        }
+	    });	
+//		$.post(
+//			"contact.php",
+//			{data:$scope.email},
+//			{'Accept': 'application/json, text/javascript','content-type':'application/json; charset=utf-8'}
+//		).done(
+//		function(response){	
+//			response.data.success?alert('done'):alert("can't send");
+//
+//		},
+//		function(response){
+//			response.data.success?alert('done'):alert("can't send");	
+//		})
+	}
 	for(var i =1;i<34;i++){$scope.imgAry.push(i);}
 	$scope.scroll = function(id,offset){
 		offset = offset || ($(id).offset().top-72);

@@ -5,22 +5,26 @@
 				<h1 class='section-header' style='color:#fff;margin-top: 0px;margin-bottom: 50px;font-family: roboto'>Make a Wish</h1>
 				<table class='table'>
 					<tr>
-						<td><input class='form-control' name="bname" type="text" value="" size="30" placeholder="Bride's Name*" /></td>
-						<td><input class='form-control' name="gname" type="text" value="" size="30" placeholder="Grooms's Name*" /></td>	
+						<td><input class='form-control' name="bname" type="text" value="" size="30" placeholder="Bride's Name*" ng-model='email.brideName'/></td>
+						<td><input class='form-control' name="gname" type="text" value="" size="30" placeholder="Grooms's Name*" ng-model='email.groomName'/></td>	
 					</tr>
 					<tr>
-						<td><input class='form-control' name="email" type="text" value="" size="30" placeholder="Your Email*" /></td>
-						<td><input class='form-control' name="phone" type="text" value="" size="30" placeholder="Your Phone*" /></td>	
+						<td><input class='form-control' name="email" type="text" value="" size="30" placeholder="Your Email*" ng-model='email.email'/></td>
+						<td><input class='form-control' name="phone" type="text" value="" size="30" placeholder="Your Phone*" ng-model='email.phone'/></td>	
 					</tr>
 					<tr>
 						<td colspan="2">
-							<input class="form-control" type="text" name="eventDate" placeholder="Event Date" />
+							<input class="form-control" type="text" name="eventDate" placeholder="Event Date" ng-model='email.eventDate'/>
 						</td>
 					</tr>
 					<tr>						
 						<td colspan="2">
-							<textarea class='form-control' name="message" rows="7" cols="30" placeholder="Your message*"></textarea><br>
-							<div class='row text-center' ><input class='btn btn-danger' style='padding: 20px;font-size: 16px;' type="submit" value="POST INQUIRY"/></div>
+							<textarea class='form-control' name="message" rows="7" cols="30" placeholder="Your message*" ng-model='email.body'></textarea><br>
+							<div class='row text-center' >
+								<a class='btn btn-danger' style='padding: 20px;font-size: 14px;' ng-click="sendEmail()">
+									POST INQUIRY
+								</a>
+							</div>
 						</td>
 					</tr>
 				</table>
