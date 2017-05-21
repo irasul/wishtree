@@ -41,23 +41,33 @@ app.controller('ctrl',['$scope','$http','packages','teamSvc','$timeout', functio
 	$scope.viewImage = false;
 	$scope.imgAry = [];
 
-	$scope.email = {
-		"brideName":"Eli",
-		"groomName":"Ifty",
-		"email":"iftakhar.rasul@gmail.com",
-		"phone":"6478865431",
-		"eventDate":"5/5/2018",
-		"body":"My msg"
+	$scope.resetEmailRequest = function(){
+		$scope.email = {
+			"brideName":"",
+			"groomName":"",
+			"email":"",
+			"phone":"",
+			"eventDate":"",
+			"body":""
+		}	
 	}
+	$scope.resetEmailRequest();
 
 	$scope.sendEmail = function(){
+		$scope.emailAlert ="sending inquiry.. please wait.";
+		$("#contactForm").slideUp();
 		$.ajax({
 	        type: "POST",
 	        data: {data:$scope.email},
 	        url: "contact.php",
 	        success: function(response){
+	        	$scope.resetEmailRequest();
 	        	const data = JSON.parse(JSON.stringify(eval("(" + response + ")"))).data;
-	        	alert(data.msg);
+	        	if(data.success){
+	        		$scope.emailAlert = data.msg;	
+	        	}
+	        	$timeout(function(){$scope.resetEmailRequest();$scope.emailAlert='';$("#contactForm").slideDown();},5000);
+	        	
 
 	        }
 	    });	

@@ -397,10 +397,7 @@ hr{
     top: 0;
     width: 100%;
 }
-.contactForm{
-	padding:0px;
-	border:none;height:500px;box-shadow: 0px 4px 2px #999;border-radius: 4px;
-}
+
 #contact{
 	background-color:#6d3939;
 	background-image:url(../img/menu/contact-bg.jpg);
@@ -408,11 +405,11 @@ hr{
 	padding: 100px 0px;
 	background-attachment: fixed;
 }
-#contact form{
+#contactForm{
 	background-color: rgba(109, 57, 57, .5);
 	padding: 50px;
 }
-#contact form input.form-control, textarea.form-control{
+#contactForm input.form-control, textarea.form-control{
 	border-radius:0px;
 	border: 1px solid #ccc;
 	background-color: rgba(156, 114, 96, .7);
@@ -422,7 +419,7 @@ hr{
 	font-size: 16px;
 }
 
-#contact form input::placeholder, #contact form textarea::placeholder{
+#contactForm input::placeholder, #contactForm textarea::placeholder{
 	color: #fff;
 	font-size: 16px;
 }
@@ -470,7 +467,7 @@ hr{
 	padding:0px;
 	position:relative;
 }
-.row{margin-right:0px;}
+.row{margin:0px;}
 .package-card.front *{
 	text-align: left;
 
@@ -561,3 +558,26 @@ hr{
 .brd-Royalty{border-top:1px solid #eacb6c;}
 .brd-Luxury{border-top:1px solid #d383d4;}
 .brd-Elite{border-top:1px solid #83d48a;}
+
+#emailAlert{
+	text-align: center;
+	margin-top: 20%;
+	padding-top: 25px;
+	width: 100%;
+	opacity: 0;
+	height: 100px;
+	display: none;
+	background-color: rgba(109, 57, 57, .5);
+	position: absolute;
+	color: #ccc;
+	transition: all .5s cubic-bezier(0.32, 0.39, 0.49, 1.16);;
+	-moz-transition: all .5s cubic-bezier(0.32, 0.39, 0.49, 1.16);;
+	-ms-transition: all .5s cubic-bezier(0.32, 0.39, 0.49, 1.16);;
+	-o-transition: all .5s cubic-bezier(0.32, 0.39, 0.49, 1.16);;
+	-webkit-transition: all .5s cubic-bezier(0.32, 0.39, 0.49, 1.16);;
+}
+#emailAlert.active{
+	opacity: 1;
+	display: block;
+	margin-top: -5%;
+}
