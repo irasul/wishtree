@@ -3,11 +3,11 @@
     $content = file_get_contents("php://input");
     $data = json_decode($content);
 
-    $bname=$data["brideName"];
-    $gname=$data["groomName"];
-    $email=$data["email"];
-    $phone=$data["phone"];
-    $eventDate=$data["eventDate"];
+    $bname=filter_var($data["brideName"],FILTER_SANITIZE_STRING);
+    $gname=filter_var($data["groomName"],FILTER_SANITIZE_STRING);
+    $email=filter_var($data["email"],FILTER_SANITIZE_EMAIL);
+    $phone=filter_var($data["phone"],FILTER_SANITIZE_NUMBER_INT);
+    $eventDate=filter_var($data["eventDate"],FILTER_SANITIZE_STRING);
     $message=$data["body"];
     
     if ( ($bname=="")||($gname=="")||($message=="") || ($email=="") || ($phone=="")) {
