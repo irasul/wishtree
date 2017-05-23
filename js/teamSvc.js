@@ -4,7 +4,7 @@ app.service('teamSvc',function(){
 			fullname : 'Shayan Mahfuz',
 			firstname: 'Shayan', 
 			title    : 'Founder, Sr. Cinematographer',
-			about    : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
+			about    : `With WishTree since 2014`,
 			picUrl   : "img/team/s.jpg",
 
 		},
@@ -12,7 +12,7 @@ app.service('teamSvc',function(){
 			fullname : 'Iftakhar Rasul',
 			firstName: 'Iftakhar', 
 			title    : 'Founder, Lead Photographer',
-			about    : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
+			about    : `With WishTree since 2014`,
 			picUrl   : "img/team/i.jpg",
 
 		},
@@ -20,7 +20,7 @@ app.service('teamSvc',function(){
 			fullname : 'Yaman Syed',
 			firstName: 'Yaman', 
 			title    : 'Sr. Cinematographer',
-			about    : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
+			about    : `With WishTree since 2014`,
 			picUrl   : "img/team/y.jpg",
 
 		},
@@ -28,7 +28,7 @@ app.service('teamSvc',function(){
 			fullname : 'Ashiqul Alam',
 			firstName: 'Ashiqul', 
 			title    : 'Sr. Cinematographer',
-			about    : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
+			about    : `With WishTree since 2014`,
 			picUrl   : "img/team/a.jpg",
 
 		},
@@ -36,40 +36,40 @@ app.service('teamSvc',function(){
 			fullname : 'Mahfuz Rahman',
 			firstName: 'Mahfuz', 
 			title    : 'Sr. Photographer',
-			about    : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
+			about    : `With WishTree since 2014`,
 			picUrl   : "img/team/m.jpg",
 
 		},
 		5:{
-			fullname : 'Omar Ali',
+			fullname : 'Omar Alsayyed',
 			firstName: 'Omar', 
 			title    : 'Photographer',
-			about    : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
-			picUrl   : "img/team/o.jpg",
+			about    : `With WishTree since 2017`,
+			picUrl   : "img/team/placeholder.png",
 
 		},
 		6:{
 			fullname : 'Kaiser Ahmed',
 			firstName: 'Kaiser', 
 			title    : 'Photographer',
-			about    : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
-			picUrl   : "img/team/k.jpg",
+			about    : `With WishTree since 2016`,
+			picUrl   : "img/team/placeholder.png",
 
 		},
 		7:{
 			fullname : 'Tareq Zilani',
 			firstName: 'Tareq', 
 			title    : 'Videographer',
-			about    : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
-			picUrl   : "img/team/t.jpg",
+			about    : `With WishTree since 2017`,
+			picUrl   : "img/team/placeholder.png",
 
 		},
 		8:{
-			fullname : 'Shahriyar Ahmed',
-			firstName: 'Shahriyar', 
+			fullname : 'Hasan Shahryer',
+			firstName: 'Shahryar', 
 			title    : 'Founder, Sr. Cinematographer',
-			about    : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
-			picUrl   : "img/team/sh.jpg",
+			about    : `With WishTree since 2017`,
+			picUrl   : "img/team/placeholder.png",
 
 		}
 	}
