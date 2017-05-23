@@ -5,7 +5,7 @@ app.service('rollerSvc',function(){
 		"img/roll/wt-3.jpg",
 		"img/roll/wt-4.jpg",
 		"img/roll/wt-5.jpg",
-		"img/roll/wt-6.jpg",
+		"img/roll/wt-9.jpg",
 		"img/roll/wt-7.jpg",
 		"img/roll/wt-8.jpg"
 	]
