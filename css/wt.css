@@ -75,6 +75,32 @@ span.spf{font-family: 'Roboto Slab', serif;}
 	color:#333;
 }
 span.spf,.para{font-family: 'Slabo 27px', serif;font-size:20px;font-weight:100;}
+
+h1.tagline{
+	font-family:  'Arizonia', cursive;
+	font-size:2em;
+	padding: 0px 50px;
+	text-align:right;
+	color:#fff;
+	font-weight:100;
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: .7;
+	width: 100%;
+	text-shadow: 1px 1px 1px #000;
+}
+.watermark{
+	padding: 0px 50px;
+	text-align:right;
+	color:#fff;
+	font-weight:100;
+	position: absolute;
+	bottom: 20px;
+	right: 0;
+	opacity: .7;
+	width: 100%;
+}
 p{
 	margin:50px 0px;
 }
@@ -183,6 +209,7 @@ font-family: 'Roboto Slab', serif;
     z-index:100;
 }
 
+
 #wt-logo{
 	background-image:url(../img/logo/wishtree.png);
 	background-repeat:no-repeat;
@@ -253,7 +280,7 @@ font-family: 'Roboto Slab', serif;
 	background-color:#000;
 	padding-top:10px;
 }
-#profile{
+#showcase{
 	margin-bottom:40px;
 }
 

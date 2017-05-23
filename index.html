@@ -9,6 +9,7 @@
 <script src="js/teamSvc.js"></script>
 <script src="js/packageSvc.js"></script>
 <script src="js/gallerySvc.js"></script>
+<script src="js/showcaseCtrl.js"></script>
 
 <script src="lightbox/js/lightbox.js"></script>
 <script>
@@ -20,7 +21,8 @@
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'/>
 <link rel="stylesheet" href="lightbox/css/lightbox.css">
 <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Tangerine|Great+Vibes|Arima+Madurai:100|Fredericka+the+Great|Roboto:100|Roboto+Slab:100|Slabo+27px" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Tangerine|Arizonia|Fredericka+the+Great|Roboto:100|Roboto+Slab:100|Slabo+27px" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
 <link rel='stylesheet' href='css/wt.css'/>
 <link rel='stylesheet' href='css/team.css'/>
 <link rel='stylesheet' href='css/gallery.css'/>
@@ -32,6 +34,8 @@
 		<ul style='margin:0px;padding:0px;position:relative;height:100%;'>
 			<li class='li-canvas' ng-repeat="bg in bgs track by $index" style="background-image: url({{bg}});" id="mainPic{{$index}}" ><li>
 		</ul>
+		<h1 class="tagline">make your wish come true...</h1>
+		<div class="watermark"><img src='img\logo\wishtree.png'/></div>
 	</section>
 	<nav class='nav navbar' id='menu'>
 		<div class='container'>
@@ -43,7 +47,7 @@
 			<ul class="nav nav-tabs pull-right" style='margin-top:25px;'>  
 				  <li role="presentation" class="active"><a ng-click="scroll('#about')">About</a></li>
 				  <li role="presentation" ><a ng-click="scroll('#packages')">Packages</a></li>
-				  <li role="presentation" ><a ng-click="scroll('#profile')">Showcase</a></li>
+				  <li role="presentation" ><a ng-click="scroll('#showcase')">Showcase</a></li>
 				  <li role="presentation" ><a ng-click="scroll('#team')">Team</a></li>
 				  <li role="presentation" ><a ng-click="scroll('#contact')">Contact</a></li>		  
 			  
@@ -67,7 +71,7 @@
 				</div>			
 		</div>
 		
-		<div class='clearfix' ng-include="'template/showcase.html'"></div>
+		<div class='clearfix' ng-controller='showcaseCtrl' ng-include="'template/showcase.html'"></div>
 		
 	
 		<div class="col-lg-12 clearfix text-center" style="padding-top: 50px;">
@@ -76,7 +80,7 @@
 			<a target='_blank' href='https://www.instagram.com/wishtreecinemas/'><img src='img/social/instagram_logo.png'></a>
 			<a target='_blank' href='https://vimeo.com/wishtreecinemas/'><img src='img/social/vimeo_logo.png'></a>
 			<p style='text-align:center'>
-				<img src='img\logo\\wishtree.png'/>
+				<img src='img\logo\wishtree.png'/>
 			</p>
 		</div>
 

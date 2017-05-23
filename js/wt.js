@@ -57,57 +57,27 @@ app.controller('ctrl',['$scope','$http','packages','teamSvc','$timeout', functio
 		$scope.emailAlert ="sending inquiry.. please wait.";
 		$("#contactForm").slideUp();
 		$.ajax({
-	        type: "POST",
-	        data: {data:$scope.email},
-	        url: "contact.php",
-	        success: function(response){
-	        	$scope.resetEmailRequest();
-	        	const data = JSON.parse(JSON.stringify(eval("(" + response + ")"))).data;
-	        	if(data.success){
-	        		$scope.emailAlert = data.msg;	
-	        	}
-	        	$timeout(function(){$scope.resetEmailRequest();$scope.emailAlert='';$("#contactForm").slideDown();},5000);
-	        	
+        type: "POST",
+        data: {data:$scope.email},
+        url: "contact.php",
+        success: function(response){
+        	$scope.resetEmailRequest();
+        	const data = JSON.parse(JSON.stringify(eval("(" + response + ")"))).data;
+        	if(data.success){
+        		$scope.emailAlert = data.msg;	
+        	}
+        	$timeout(function(){$scope.resetEmailRequest();$scope.emailAlert='';$("#contactForm").slideDown();},5000);
+        	
 
-	        }
-	    });	
-//		$.post(
-//			"contact.php",
-//			{data:$scope.email},
-//			{'Accept': 'application/json, text/javascript','content-type':'application/json; charset=utf-8'}
-//		).done(
-//		function(response){	
-//			response.data.success?alert('done'):alert("can't send");
-//
-//		},
-//		function(response){
-//			response.data.success?alert('done'):alert("can't send");	
-//		})
+        }
+    });	
 	}
-	for(var i =1;i<34;i++){$scope.imgAry.push(i);}
+	
 	$scope.scroll = function(id,offset){
 		offset = offset || ($(id).offset().top-72);
 		$('html,body').animate({scrollTop:offset});
 	}
-	$scope.showGallery = function(){
-		$scope.showModal=true;
-		$scope.scroll('#pic-canvas','0px')
-	}
-
-	$scope.closeGallery = function(){
-		$('#artboard').slideUp();
-	}
-
-	$scope.setPV = function(index){
-
-		$scope.showcase=index;
-		$scope.$apply()
-	}
-	$scope.loadImg = function(i){
-		$("#lrg-image").css('background-image',"url(SiteGallery/wt-"+i+".jpg)");
-		$scope.viewImage = true;
-	}
-
+	
 	$scope.pkg = packages.photo;
 	$scope.teamMembers = teamSvc.members;
 	
@@ -162,15 +132,6 @@ app.directive('pkgManager',function(){
 					$("#pkg-"+d).removeClass('active');	
 				
 			}
-			
-			$scope.setCat = function(a){
-				gallerySvc.setActiveGallery(a);
-				$scope.setShowcaseGallery = gallerySvc.getPics();
-				$scope.activeGalleryTtle = gallerySvc.getTitle();
-				$('#artboard').slideDown();
-
-			}
-
 			
 			$scope.activateButton(1,2);
 			$scope.setPhotoPkg();
