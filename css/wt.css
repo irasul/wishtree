@@ -595,7 +595,7 @@ hr{
 	height: 100px;
 	display: none;
 	background-color: rgba(109, 57, 57, .5);
-	position: absolute;
+	
 	color: #ccc;
 	transition: all .5s cubic-bezier(0.32, 0.39, 0.49, 1.16);;
 	-moz-transition: all .5s cubic-bezier(0.32, 0.39, 0.49, 1.16);;
