@@ -34,7 +34,16 @@
 		<ul style='margin:0px;padding:0px;position:relative;height:100%;'>
 			<li class='li-canvas' ng-repeat="bg in bgs track by $index" style="background-image: url({{bg}});" id="mainPic{{$index}}" ><li>
 		</ul>
-		<h1 class="tagline">make your wish come true...</h1>
+		<h1 class="tagline">
+			<div class="row pad0">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pull-left">
+					<div ng-include="'template/socialNetwork.html'"></div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pull-right">
+					make your wish come true...
+					</div>
+			</div> 
+		</h1>
 		<div class="watermark"><img src='img\logo\wishtree.png'/></div>
 	</section>
 	<nav class='nav navbar' id='menu'>
@@ -71,18 +80,12 @@
 				</div>			
 		</div>
 		
+		<!-- showcase -->
 		<div class='clearfix' ng-controller='showcaseCtrl' ng-include="'template/showcase.html'"></div>
 		
 	
-		<div class="col-lg-12 clearfix text-center" style="padding-top: 50px;">
-			<span class='spf'>Connect with us:</span> 
-			<a target='_blank' href='https://www.facebook.com/wishtreecinemas/'><img src='img/social/facebook_logo.png'></a> 
-			<a target='_blank' href='https://www.instagram.com/wishtreecinemas/'><img src='img/social/instagram_logo.png'></a>
-			<a target='_blank' href='https://vimeo.com/wishtreecinemas/'><img src='img/social/vimeo_logo.png'></a>
-			<p style='text-align:center'>
-				<img src='img\logo\wishtree.png'/>
-			</p>
-		</div>
+		<!-- wishtree connect -->
+		<div class="clearfix" ng-include="'template/connect.html'"></div>
 
 		<!-- packages -->
 		<div class='clearfix' pkg-manager pkg='pkg'></div>

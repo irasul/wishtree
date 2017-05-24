@@ -76,22 +76,7 @@ span.spf{font-family: 'Roboto Slab', serif;}
 }
 span.spf,.para{font-family: 'Slabo 27px', serif;font-size:20px;font-weight:100;}
 
-h1.tagline{
-	font-family:  'Arizonia', cursive;
-	font-size:2em;
-	padding: 0px 50px;
-	text-align:center;
-	color:#fff;
-	font-weight:100;
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding-bottom: 20px;
-	opacity: .8;
-	width: 100%;
-	margin-top: 0px;
-	text-shadow: 1px 1px 1px #000;
-}
+
 .watermark{
 	padding: 0px 50px;
 	text-align:right;
@@ -126,11 +111,45 @@ h1.section-header{
 	-webkit-transition: opacity .5s ease;
     transition: opacity .5s ease;
 }
+h1.tagline{
+	font-family:  'Arizonia', cursive;
+	font-size:2em;
+	padding: 0px 20px;
+	text-align:center;
+	color:#fff;
+	font-weight:100;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-bottom: 20px;
+	padding-top: 5px;
+	width: 100%;
+	margin-top: 0px;
+	text-shadow: 1px 1px 1px #000;
+}
+h1.tagline .pull-left img{
+	width: 30px;
+}
+h1.tagline .pull-left a{
+	display: inline-block;
+}
+h1.tagline .pull-right{
+	opacity: .8;
+}
+
 @media (min-width:992px){
 	/*background-position: center;*/
-	h1.tagline{
+	h1.tagline .pull-right{
 		text-align: right;
 	}
+	h1.tagline .pull-left{
+		text-align: left;
+	}
+	h1.tagline .pull-left a{
+		display: block;
+		padding: 5px;
+	}
+	
 }
 .li-canvas.active{
 	opacity:1;
@@ -308,11 +327,11 @@ font-family: 'Roboto Slab', serif;
 	background-color:#947042;
 	opacity:1;
 	background-position:center;
-	transition: all 2s cubic-bezier(0.06, 0.39, 0.43, 0.71);
-	-moz-transition: all 2s cubic-bezier(0.06, 0.39, 0.43, 0.71);
-	-ms-transition: all 2s cubic-bezier(0.06, 0.39, 0.43, 0.71);
-	-o-transition: all 2s cubic-bezier(0.06, 0.39, 0.43, 0.71);
-	-webkit-transition: all 2s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	transition: opacity 2s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-moz-transition: opacity 2s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-ms-transition: opacity 2s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-o-transition: opacity 2s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-webkit-transition: opacity 2s cubic-bezier(0.06, 0.39, 0.43, 0.71);
 
 }
 .pic-holder-p{
