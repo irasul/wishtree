@@ -80,14 +80,16 @@ h1.tagline{
 	font-family:  'Arizonia', cursive;
 	font-size:2em;
 	padding: 0px 50px;
-	text-align:right;
+	text-align:center;
 	color:#fff;
 	font-weight:100;
 	position: absolute;
 	top: 0;
 	right: 0;
-	opacity: .7;
+	padding-bottom: 20px;
+	opacity: .8;
 	width: 100%;
+	margin-top: 0px;
 	text-shadow: 1px 1px 1px #000;
 }
 .watermark{
@@ -126,6 +128,9 @@ h1.section-header{
 }
 @media (min-width:992px){
 	/*background-position: center;*/
+	h1.tagline{
+		text-align: right;
+	}
 }
 .li-canvas.active{
 	opacity:1;
@@ -400,7 +405,7 @@ hr{
 	margin:10px;
 }
 .addedHeight{
-	margin-top:100px;
+	margin-top:100px!important;
 }
 
 #menu{background-color:#fff;}

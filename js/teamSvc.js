@@ -57,7 +57,7 @@ app.service('teamSvc',function(){
 
 		},
 		7:{
-			fullname : 'Tareq Zilani',
+			fullname : 'Tareq Mohammed',
 			firstName: 'Tareq', 
 			title    : 'Videographer',
 			about    : `With WishTree since 2017`,
@@ -67,7 +67,7 @@ app.service('teamSvc',function(){
 		8:{
 			fullname : 'Hasan Shahryer',
 			firstName: 'Shahryar', 
-			title    : 'Founder, Sr. Cinematographer',
+			title    : 'Videographer',
 			about    : `With WishTree since 2017`,
 			picUrl   : "img/team/placeholder.png",
 
