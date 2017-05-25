@@ -192,12 +192,24 @@ h1.tagline .pull-right{
 	background-color:transparent;
 	border-radius:0px;
 	color:#666;
+	font-weight: 700;
+	opacity: .7;
 	border:none;
+	text-decoration:none;	
 	font-family: 'Roboto Slab', serif;
+	-webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+  -moz-transition: opacity .3s ease;
+  -ms-transition: opacity.3s  ease;
+  -o-transition: opacity .3s ease;
+}
+.nav-tabs>li>a:hover{
+	opacity: 1;
+	text-decoration:none;	
 }
 .nav>li>a:focus, .nav>li>a:hover{
-	text-decoration:underline;	
-font-family: 'Roboto Slab', serif;
+	
+	/*font-family: 'Roboto Slab', serif;*/
 }
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{

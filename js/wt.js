@@ -76,6 +76,7 @@ app.controller('ctrl',['$scope','$http','packages','teamSvc','$timeout', functio
 	$scope.scroll = function(id,offset){
 		offset = offset || ($(id).offset().top-72);
 		$('html,body').animate({scrollTop:offset});
+		window.location.hash = "/"+id
 	}
 	
 	$scope.pkg = packages.photo;
