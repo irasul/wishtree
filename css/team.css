@@ -7,6 +7,7 @@
 	float:left;
 	position:relative;
 	transition:all .5s ease;
+	overflow: hidden;
 	-webkit-transition:all .5s ease;
 }
 @media (min-width:1200px){
@@ -56,6 +57,7 @@
 	top: -100px;
 	background-color: #482d1b;
 	color: #fff;
+	z-index:-1;
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -67,6 +69,7 @@
 	-webkit-transition: all .3s cubic-bezier(0.06, 0.39, 0.43, 0.71);	
 }
 .team-holder:hover>.jobDesc{
+	z-index:10;
 	opacity: .8;
 	top: 0;
 

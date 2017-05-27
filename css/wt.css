@@ -182,13 +182,13 @@ h1.tagline .pull-right{
 	.pad{
 		padding:30px;
 	}
-	.nav.nav-tabs.pull-right{float:left!important;}
+	.nav.nav-tabs.pull-right, .nav.nav-stacked{float:left!important;}
 }
 
 .menu-container{
 	height:500px;
 }
-.nav>li>a:focus, .nav>li>a:hover, .nav-tabs>li>a{
+.nav>li>a:focus, .nav>li>a:hover, .nav-tabs>li>a, .nav-stacked>li>a{
 	background-color:transparent;
 	border-radius:0px;
 	color:#666;
@@ -212,14 +212,15 @@ h1.tagline .pull-right{
 	/*font-family: 'Roboto Slab', serif;*/
 }
 
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover,
+.nav-stacked>li.active>a, .nav-stacked>li.active>a:focus, .nav-stacked>li.active>a:hover{
 	background-color:transparent;
 font-family: 'Roboto Slab', serif;
 	color:#666;
 	border:none;
 	
 }
-.nav-tabs{
+.nav-tabs, .nav-stacked{
 	border-bottom:none;
 	background-color:#fff;
 	padding:0px;

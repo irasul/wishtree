@@ -41,6 +41,7 @@ app.controller('ctrl',['$scope','$http','packages','teamSvc','$timeout', functio
 	$scope.viewImage = false;
 	$scope.imgAry = [];
 
+	
 	$scope.resetEmailRequest = function(){
 		$scope.email = {
 			"brideName":"",

@@ -212,4 +212,12 @@ body.lb-disable-scrolling {
   opacity: 1;
 }
 
+.example-image-link:hover{
+  text-decoration: none;
+}
+
+.example-image-link:hover img{
+  box-shadow: 0px 0px 3px #333;
+}
+
 
