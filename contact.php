@@ -19,7 +19,7 @@
         $from   = "From: $bname<$email>\r\nReturn-path: $email";
         $subject= "Message sent using your contact form";
         $body   = "Bride's Name: $bname\r\nGroom's Name: $gname\r\nEvent Date: $eventDate\r\nPhone: $phone\r\n$message";
-        mail( "iftakhar.rasul@gmail.com", $subject, $body, $from );
+        mail( "info@wishtree-cinemas.com", $subject, $body, $from );
         echo "{data: {success: true, msg: 'Thank you! We will get back to you soon.' }}";
     }
   
