@@ -60,31 +60,19 @@
 			  <li class='pull-left hidden-xs'><h3 id='wt-cName'>WishTree Cinemas</h3><li>	
 			  <div class='clearfix' style='padding-top:25px'>
 			</ul>
-			<ul class="nav nav-tabs pull-right" style='margin-top:25px;'>  
-				  <li role="presentation" class="active"><a ng-click="scroll('#about')">About</a></li>
-				  <li role="presentation" ><a ng-click="scroll('#packages')">Packages</a></li>
-				  <li role="presentation" ><a ng-click="scroll('#showcase')">Showcase</a></li>
-				  <li role="presentation" ><a ng-click="scroll('#team')">Team</a></li>
-				  <li role="presentation" ><a ng-click="scroll('#contact')">Contact</a></li>		  
+			<ul class="nav nav-tabs pull-right" style='margin-top:25px;' id="main-menu">  
+				  <li role="presentation" ng-class="{'active': cMenu==0}"><a ng-click="scroll('#about')">About</a></li>
+				  <li role="presentation" ng-class="{'active': cMenu==1}"><a ng-click="scroll('#packages')">Packages</a></li>
+				  <li role="presentation" ng-class="{'active': cMenu==2}"><a ng-click="scroll('#showcase')">Showcase</a></li>
+				  <li role="presentation" ng-class="{'active': cMenu==3}"><a ng-click="scroll('#team')">Team</a></li>
+				  <li role="presentation" ng-class="{'active': cMenu==4}"><a ng-click="scroll('#contact')">Contact</a></li>		  
 			</ul>
 		</div>
 	</nav>
 	<section  class='row' style='background-color:#eee;' id='postMenu'>
-		<div class='col-lg-12 clearfix' id='about'>
-				<h1 class='spf' style='margin-top:50px'>The WishTree Story</h1>
-				<div class='container'>
-					<div class='para'>
-						<p><span class='spf' style='font-size:28px'>P</span>assion breeds perfection; and that mere fact drove our ambitions and we embarked upon founding this company. 
-						We are uncompromising when faced with challenges. 
-						Give us the opportunity to capture the best moments of your life. Let us freeze the time in our camera-frames that you will cherish forever while we satisfy our hunger for perfection.
-						We believe that every love story is eternal and we are here to make your wedding everlasting
-						</p>
-						<p style='text-align:center'>
-							<img src='img\logo\wishtree-lrg-2.png'/>
-						</p>
-					</div>
-				</div>			
-		</div>
+		
+		<!-- about us -->
+		<div class='clearfix' ng-include="'template/about.html'"></div>
 		
 		<!-- showcase -->
 		<div class='clearfix' ng-controller='showcaseCtrl' ng-include="'template/showcase.html'"></div>

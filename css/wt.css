@@ -454,6 +454,12 @@ hr{
 	padding-bottom:10px;
 	margin-bottom:0px;
 }
+
+#main-menu>li.active{
+	border-bottom: 2px solid #ccc;
+	opacity: 1;
+	color: #000;
+}
 .f-nav{  /* To fix main menu container */
     z-index: 9999;
     position: fixed;

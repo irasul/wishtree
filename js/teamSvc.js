@@ -21,7 +21,7 @@ app.service('teamSvc',function(){
 			firstName: 'Yaman', 
 			title    : 'Sr. Cinematographer',
 			about    : `With WishTree since 2014`,
-			picUrl   : "img/team/y.jpg",
+			picUrl   : "img/team/placeholder.png",
 
 		},
 		3:{
@@ -53,7 +53,7 @@ app.service('teamSvc',function(){
 			firstName: 'Kaiser', 
 			title    : 'Photographer',
 			about    : `With WishTree since 2016`,
-			picUrl   : "img/team/placeholder.png",
+			picUrl   : "img/team/k.jpg",
 
 		},
 		7:{
@@ -61,7 +61,7 @@ app.service('teamSvc',function(){
 			firstName: 'Tareq', 
 			title    : 'Videographer',
 			about    : `With WishTree since 2017`,
-			picUrl   : "img/team/placeholder.png",
+			picUrl   : "img/team/t.jpg",
 
 		},
 		8:{
@@ -69,7 +69,7 @@ app.service('teamSvc',function(){
 			firstName: 'Shahryar', 
 			title    : 'Videographer',
 			about    : `With WishTree since 2017`,
-			picUrl   : "img/team/placeholder.png",
+			picUrl   : "img/team/sh.jpg",
 
 		}
 	}
