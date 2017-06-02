@@ -56,12 +56,12 @@ app.controller('ctrl',['$scope','$http','packages','teamSvc','$timeout', functio
 	
 	$scope.resetEmailRequest = function(){
 		$scope.email = {
-			"brideName":"Eli",
-			"groomName":"Ift",
-			"email":"iftakhar.rasul@gmail.com",
-			"phone":"121212",
-			"eventDate":"1/1/2012",
-			"body":"boby"
+			"brideName":"",
+			"groomName":"",
+			"email":"",
+			"phone":"",
+			"eventDate":"",
+			"body":""
 		}	
 	}
 	$scope.resetEmailRequest();
