@@ -178,4 +178,8 @@ app.controller('pic-roller',['$scope','$interval','rollerSvc',function($scope,$i
 	},5000)
 }])
 
+app.controller('partners',['$scope','partnerSvc',function($scope,partnerSvc){
+
+	$scope.partners = partnerSvc.partners;
+}]);
 

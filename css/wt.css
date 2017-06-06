@@ -520,9 +520,11 @@ hr{
 }
 #copyright{
 	font-family: roboto;
-	color: #fff;
+	color: #333;
+	background-color: #fff;
 	font-weight: 700;
 	font-size: 80%;
+	padding:50px!important;
 }
 .jobTitle{
 	font-family: 'Roboto Slab', serif;
@@ -650,4 +652,13 @@ hr{
 	opacity: 1;
 	display: block;
 	margin-top: -5%;
+}
+#partners {
+	background-color: #fff;
+}
+#partnerList {
+	text-align: center;
+}
+#partnerList img{
+	margin: 30px;
 }

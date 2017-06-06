@@ -16,6 +16,7 @@
 <script src="js/teamSvc.js"></script>
 <script src="js/packageSvc.js"></script>
 <script src="js/gallerySvc.js"></script>
+<script src="js/partnerSvc.js"></script>
 <script src="js/showcaseCtrl.js"></script>
 
 <script src="lightbox/js/lightbox.js"></script>
@@ -87,11 +88,18 @@
 		<!-- team -->
 		<div class='clearfix' ng-include="'template/team.html'"></div>
 
-
 		<!-- contact -->
-		<div ng-include="'template/contact.html'"></div>
+		<div class='clearfix' ng-include="'template/contact.html'"></div>
+		
 		<!--other contacts-->	
-		<div ng-include="'template/otherContacts.html'"></div>
+		<div class='clearfix' ng-include="'template/otherContacts.html'"></div>
+
+		<!--partners-->	
+		<div class='clearfix' ng-include="'template/partners.html'"></div>
+
+		<!--copyright-->
+		<div class='clearfix' ng-include="'template/copyright.html'"></div>
+
 		
 	</section>
 </body>
