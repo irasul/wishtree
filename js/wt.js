@@ -95,6 +95,19 @@ app.controller('ctrl',['$scope','$http','packages','teamSvc','$timeout', functio
 	
 	$scope.pkg = packages.photo;
 	$scope.teamMembers = teamSvc.members;
+	$scope.currentBio = null;
+
+	$scope.shortDesc = function(desc){
+		return desc.length>100?desc.substring(0,97)+"...":desc;
+
+	}
+
+	$scope.setCurrentBio = function(bio){
+		$scope.currentBio = bio;
+		if(bio!==null){
+			$scope.scroll('#team');
+		}
+	}
 	
 
 }]);

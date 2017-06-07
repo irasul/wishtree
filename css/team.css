@@ -10,6 +10,30 @@
 	overflow: hidden;
 	-webkit-transition:all .5s ease;
 }
+.bio-holder{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-top: 50px;
+	opacity: 1;
+	z-index: 6;
+}
+.tm-modal{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #000;
+	opacity: .95;
+	display:none;
+	z-index: 5;
+}
+.tm-modal.active{
+	display: block;
+}
 @media (min-width:1200px){
 	.team-holder{
 		height:300px;
@@ -73,7 +97,7 @@
 	-webkit-transition: all .3s cubic-bezier(0.06, 0.39, 0.43, 0.71);	
 }
 .team-holder:hover>.jobDesc{
-	z-index:10;
+	z-index:4;
 	opacity: .8;
 	top: 0;
 

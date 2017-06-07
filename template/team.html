@@ -1,7 +1,22 @@
 <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix pad0' id='team'>
 	<h1 class='section-header' style='text-align:center;'>The Team</h1>
 	<div class='container' style="margin:0px auto">
-
+		<div class="tm-modal hidden-sm hidden-xs" ng-class={active:currentBio!=null}></div>
+		<div class="bio-holder hidden-sm hidden-xs" ng-if='currentBio!=null'>
+			<div class="container">
+				<div class='col-sm-4 col-xs-4 team-pic-holder-box' style='background-image: url({{currentBio.picUrl}});margin-top:15px;height: 300px;'></div>
+				<div class='col-sm-8 col-xs-8'>
+					<div class='para' style="padding: 15px;color: #fff">
+						{{currentBio.fullname}}<br>
+						<span style="font-size: 75%">{{currentBio.title}}</span><br>
+						<span style="font-size: 75%;font-family: roboto slab">{{currentBio.about}}</span>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 text-center">
+					<div class="btn btn-lrg btn-default" style="margin: 40px;padding: 15px 21px;border-radius: 60px" ng-click="setCurrentBio(null)">X</div>
+				</div>
+			</div>
+		</div>
 		<div ng-repeat='m in teamMembers' id='{{m.firstname}}' class='col-lg-4 col-md-4 hidden-sm hidden-xs'>
 			<div class="team-holder">
 				<div class='team-pic-holder' style='background-image: url({{m.picUrl}}'></div>
@@ -13,7 +28,8 @@
 					<div class='para' style="padding: 15px">
 						{{m.fullname}}<br>
 						<span style="font-size: 75%">{{m.title}}</span><br>
-						<span style="font-size: 75%;font-family: roboto slab">{{m.about}}</span>
+						<span style="font-size: 75%;font-family: roboto slab">{{shortDesc(m.about)}}</span>
+						<a style='font-size: 80%;cursor: pointer;' ng-if='m.about.length>100' ng-click='setCurrentBio(m)'>more</a>
 					</div>
 
 				</div>
@@ -22,7 +38,7 @@
 
 		<div ng-repeat='m in teamMembers' id='{{m.firstname}}' class='hidden-lg hidden-md col-sm-12 col-xs-12'>
 			<div class="col-sm-12 col-xs-12 team-holder-box">
-				<div class='col-sm-4 col-xs-4 team-pic-holder-box' style='background-image: url({{m.picUrl}}'></div>
+				<div class='col-sm-4 col-xs-4 team-pic-holder-box' style='background-image: url({{m.picUrl}});margin-top:15px;'></div>
 				<div class='col-sm-8 col-xs-8'>
 					<div class='jobDesc'>
 						<div class='para' style="padding: 15px">
