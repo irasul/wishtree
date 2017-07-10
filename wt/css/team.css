@@ -1,0 +1,104 @@
+.team-holder{
+	
+	height: 270px;
+	width:100%;
+	margin: 10px 0px;
+	background-color:#482d1b;		
+	float:left;
+	position:relative;
+	transition:all .5s ease;
+	-webkit-transition:all .5s ease;
+}
+@media (min-width:1200px){
+	.team-holder{
+		height:300px;
+	}
+}
+.team-holder:hover>.team-pic-holder{
+	background-size:200%;
+}
+
+.team-pic-holder{
+	outline:1px solid #ccc;
+	background-size:100% auto;
+	background-repeat:no-repeat;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background-position:top;
+	transition: background-size 0.5s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-moz-transition: background-size 0.5s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-ms-transition: background-size 0.5s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-o-transition: background-size 0.5s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-webkit-transition: background-size 0.5s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+
+}
+
+.t1{background-image:url(../img/team/s.jpg)}
+.t2{background-image:url(../img/team/y.jpg)}
+.t3{background-image:url(../img/team/a.jpg)}
+.t4{background-image:url(../img/team/m.jpg)}
+.t5{background-image:url(../img/team/i.jpg)}
+.t7{background-image:url(../img/team/i.jpg)}
+
+.jobTitle{
+	font-family: 'Roboto Slab', serif;
+	position: absolute;
+	bottom: 20px;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+ 	transition: all .3s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-moz-transition: all .3s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-ms-transition: all .3s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-o-transition: all .3s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-webkit-transition: all .3s cubic-bezier(0.06, 0.39, 0.43, 0.71);	 
+}
+.team-holder:hover>.jobTitle{
+	opacity: 0;
+	bottom: 0px;
+}
+.team-holder>.jobDesc{
+	opacity: 0;
+	top: -100px;
+	background-color: #482d1b;
+	color: #fff;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	
+	transition: all .3s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-moz-transition: all .3s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-ms-transition: all .3s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-o-transition: all .3s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-webkit-transition: all .3s cubic-bezier(0.06, 0.39, 0.43, 0.71);	
+}
+.team-holder:hover>.jobDesc{
+	opacity: .8;
+	top: 0;
+
+}
+
+
+.team-holder-box{
+	display: block;
+	position: relative;
+	margin-bottom: 20px;
+	background-color: #fff;
+	padding: 10px;
+	opacity: .95;
+}
+
+.team-pic-holder-box{
+	outline:1px solid #ccc;
+	background-size:cover;
+	background-repeat:no-repeat;
+	height: 150px;
+	overflow: hidden;
+	background-position:top;
+	transition: background-size 0.5s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-moz-transition: background-size 0.5s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-ms-transition: background-size 0.5s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-o-transition: background-size 0.5s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+	-webkit-transition: background-size 0.5s cubic-bezier(0.06, 0.39, 0.43, 0.71);
+}

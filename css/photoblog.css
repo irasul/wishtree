@@ -1,0 +1,49 @@
+.photoblog{
+	width: 960px;
+	margin:0px auto;
+}
+.photoblog .foto{
+	background-color: #ccc;
+	outline: 1px solid #fff;
+	display: inline-flex;
+}
+
+.bnr{
+	width:100%;
+	height:380px;
+}
+
+.foto.bnr{
+	width:100%;
+	height:400px;
+}
+
+.foto.bnrThin{
+	width:100%;
+	height:240px;
+}
+
+.foto.sqr4{
+	width:25%;
+	height:240px;
+}
+
+.foto.sqr2{
+	width:50%;
+	height:480px;
+}
+
+.foto.rect{
+	width:50%;
+	height:240px;
+}
+
+.foto.full{
+	width:100%;
+	height:640px;
+}
+
+.foto.half{
+	width:50%;
+	height:640px;
+}

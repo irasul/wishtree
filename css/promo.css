@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+#promoBox{
+	height:460px;
+	width: 360px;
+	padding:10px;
+	border-radius: 4px;
+	margin: 0px auto;
+	background-color: #fff;
+	box-shadow: 3px 3px 3px #000;
+	position: absolute;
+	top:100px;
+	left:0px;
+	right: 0px;
+	z-index: 3001;
+}
+#promoButton {
+	padding:10px;
+	border:4px dotted #ccc;
+	border-radius: 4px;
+	color: #666;
+	cursor: pointer;
+	-webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all.3s  ease;
+  -o-transition: all .3s ease;
+}
+#promoButton:hover{
+	border-color: orange;
+	color: #000;
+}
+#promoBox *{
+	text-align: center;
+}
+#promoBox h1{
+	font-family: 'Muli', sans-serif;
+	color: orange;
+}
+.promoMenu a{
+	color: orange!important;
+}

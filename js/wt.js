@@ -31,7 +31,7 @@ app.controller('ctrl',['$scope','$http','packages','teamSvc','$timeout', functio
 	window.navOffsetTop = $('#menu').offset().top;
 	window.showMenu(0);
 	window.elemOffsetTop = [];
-
+	$scope.showSmallMenu = false;
 	$(window).on('scroll',function() {
 		const pos = $(this).scrollTop();
 		showMenu(pos);
@@ -130,6 +130,7 @@ app.directive('pkgManager',function(){
 			//$scope.pkg = packages.photo;
 			
 			$scope.showPkg = function(pkgCategory, pkgName){
+				$scope.showSmallMenu=false;
 				$('#pkgPane').addClass('rotate');
 				$(".pkgType").removeClass('active');
 				$scope.currentSelection = pkgCategory+pkgName;
@@ -163,7 +164,7 @@ app.directive('pkgManager',function(){
 			}
 
 			$scope.activateButton = function(a,d){
-				
+					
 					$("#pkg-"+a).addClass('active');
 					$("#pkg-"+d).removeClass('active');	
 				

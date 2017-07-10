@@ -1,0 +1,12 @@
+<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix' id='artboard'>
+	<ul style="padding: 0px" id='gallery-list'>
+		<h1 style="margin-bottom: 20px;">{{activeGalleryTtle}}</h1>
+		<a ng-repeat="img in setShowcaseGallery" class="example-image-link" href="{{img.fullImg}}" 
+			data-lightbox="example-set" data-title="WishTree Cinemas">
+			<img class="example-image" src="{{img.thumb}}" class='image-responsive'/>
+		</a>
+		<br>
+		<div class='btn btn-lrg btn-default' style="margin: 40px;padding: 15px 21px;border-radius: 60px" ng-click="closeGallery()">X</div>
+	</ul>
+
+</div>

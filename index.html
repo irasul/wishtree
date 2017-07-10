@@ -18,6 +18,7 @@
 <script src="js/gallerySvc.js"></script>
 <script src="js/partnerSvc.js"></script>
 <script src="js/showcaseCtrl.js"></script>
+<script src="js/promo.js"></script>
 
 <script src="lightbox/js/lightbox.js"></script>
 <script>
@@ -34,6 +35,7 @@
 <link rel='stylesheet' href='css/wt.css'/>
 <link rel='stylesheet' href='css/team.css'/>
 <link rel='stylesheet' href='css/gallery.css'/>
+<link rel='stylesheet' href='css/promo.css'/>
 
 </head>
 <body ng-app='app' ng-controller='ctrl'>
@@ -56,17 +58,31 @@
 	</section>
 	<nav class='nav navbar' id='menu'>
 		<div class='container'>
-			<ul class="nav nav-tabs pull-left">
-			  <li class='pull-left'><div id='wt-logo' ></div><li>
-			  <li class='pull-left hidden-xs'><h3 id='wt-cName'>WishTree Cinemas</h3><li>	
-			  <div class='clearfix' style='padding-top:25px'>
-			</ul>
-			<ul class="nav nav-tabs pull-right" style='margin-top:25px;' id="main-menu">  
-				  <li role="presentation" ng-class="{'active': cMenu==0}"><a ng-click="scroll('#about')">About</a></li>
-				  <li role="presentation" ng-class="{'active': cMenu==1}"><a ng-click="scroll('#packages')">Packages</a></li>
-				  <li role="presentation" ng-class="{'active': cMenu==2}"><a ng-click="scroll('#showcase')">Showcase</a></li>
-				  <li role="presentation" ng-class="{'active': cMenu==3}"><a ng-click="scroll('#team')">Team</a></li>
-				  <li role="presentation" ng-class="{'active': cMenu==4}"><a ng-click="scroll('#contact')">Contact</a></li>		  
+			<div class="clearfix">
+				<ul class="nav nav-tabs pull-left">
+				  <li class='pull-left'><div id='wt-logo' ></div><li>
+				  <li class='pull-left'><h3 id='wt-cName'>WishTree Cinemas</h3><li>	
+				</ul>
+				<ul class="nav nav-tabs pull-right hidden-sm hidden-xs" style='margin-top:25px;' id="main-menu">  
+					<li role="presentation" class="promoMenu" ng-if="isPromoActive"><a ng-click="setShowPromo()">Promo</a></li>
+					<li role="presentation" ng-class="{'active': cMenu==0}"><a ng-click="scroll('#about')">About</a></li>
+					<li role="presentation" ng-class="{'active': cMenu==1}"><a ng-click="scroll('#packages')">Packages</a></li>
+					<li role="presentation" ng-class="{'active': cMenu==2}"><a ng-click="scroll('#showcase')">Showcase</a></li>
+					<li role="presentation" ng-class="{'active': cMenu==3}"><a ng-click="scroll('#team')">Team</a></li>
+					<li role="presentation" ng-class="{'active': cMenu==4}"><a ng-click="scroll('#contact')">Contact</a></li>		  
+				</ul>				
+				<div class="pull-right hidden-lg hidden-md" id='sm-menu-icon' ng-click='showSmallMenu=!showSmallMenu' ng-class={active:showSmallMenu}>
+					<span class="glyphicon glyphicon-menu-hamburger" ></span>
+				</div>
+			</div>	
+			<ul class="nav nav-stacked hidden-lg hidden-md" style='margin-top:25px;width: 100%;height: 100%;' id="sm-menu" ng-class={active:showSmallMenu}>  
+				<li role="presentation" class="promoMenu" ng-if="isPromoActive"><a ng-click="setShowPromo())">Promo</a></li>
+				<li role="presentation" ng-class="{'active': cMenu==0}"><a ng-click="scroll('#about');showSmallMenu=false;">About</a></li>
+				<li role="presentation" ng-class="{'active': cMenu==1}"><a ng-click="scroll('#packages');showSmallMenu=false;">Packages</a></li>
+				<li role="presentation" ng-class="{'active': cMenu==2}"><a ng-click="scroll('#showcase');showSmallMenu=false;">Showcase</a></li>
+				<li role="presentation" ng-class="{'active': cMenu==3}"><a ng-click="scroll('#team');showSmallMenu=false;">Team</a></li>
+				<li role="presentation" ng-class="{'active': cMenu==4}"><a ng-click="scroll('#contact');showSmallMenu=false;">Contact</a></li>
+				<li><div class="btn btn-lrg btn-default" style="margin: 40px;padding: 15px 21px;border-radius: 60px" ng-click="showSmallMenu=false;">X</div></li>
 			</ul>
 		</div>
 	</nav>
@@ -94,13 +110,13 @@
 		<!--other contacts-->	
 		<div class='clearfix' ng-include="'template/otherContacts.html'"></div>
 
-		<!--partners-->	
+		<!--partners
 		<div class='clearfix' ng-include="'template/partners.html'"></div>
 
-		<!--copyright-->
+		copyright
 		<div class='clearfix' ng-include="'template/copyright.html'"></div>
-
-		
+		-->
+		<promo-mgr></promo-mgr>
 	</section>
 </body>
 </html>

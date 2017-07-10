@@ -19,7 +19,7 @@
 						<div ng-repeat='(key,value) in pkg.packageNames' class="clearfix">
 							<h3>{{key}}</h5>
 							<ul class='packageNames'>
-								<li ng-repeat='v in value' ng-click='showPkg(key,v)' class='pkgType' id={{key+v}} ng-class="{active: currentSelection === key+v }">{{v}}</li>
+								<li ng-repeat='v in value' ng-click='showPkg(key,v);' class='pkgType' id={{key+v}} ng-class="{active: currentSelection === key+v }">{{v}}</li>
 							</ul>
 						</div>	
 					</div>	

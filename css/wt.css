@@ -379,8 +379,10 @@ font-family: 'Roboto Slab', serif;
 	}
 }*/
 
-.vid-holder {
-	height:600px;
+@media (min-width:768px){
+	.vid-holder {
+		height:600px;
+	}
 }
 
 .v1,v2{background-color:transparent;outline:none;}
@@ -661,4 +663,23 @@ hr{
 }
 #partnerList img{
 	margin: 30px;
+}
+
+#sm-menu-icon{
+	margin:25px 20px 0px 0px;
+	font-size: 32px;
+	color: #ad7d2d;
+	cursor: pointer;
+}
+#sm-menu-icon.active, #sm-menu-icon:hover, #sm-menu-icon:active{
+	color: #926720;
+}
+
+#sm-menu{
+	text-align: center;
+	display: none;
+	font-size: 24px;
+}
+#sm-menu.active{
+	display: block;
 }

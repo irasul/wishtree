@@ -1,0 +1,37 @@
+<div class='row' id='contact'>
+		<div class='container'>
+			 <h1 ng-bind='emailAlert' id='emailAlert' ng-class="{active:emailAlert.length}"></h1>
+			 <form class='form-group' id='contactForm' method="POST" enctype="multipart/form-data">
+				<!--<input type="hidden" name="action" value="submit">-->
+				<h1 class='section-header' style='color:#fff;margin-top: 0px;margin-bottom: 50px;font-family: roboto'>Make a Wish</h1>
+				<table class='table'>
+					<tr>
+						<td><input class='form-control' name="bname" type="text" value="" size="30" placeholder="Bride's Name*" ng-model='email.brideName'/></td>
+						<td><input class='form-control' name="gname" type="text" value="" size="30" placeholder="Grooms's Name*" ng-model='email.groomName'/></td>	
+					</tr>
+					<tr>
+						<td><input class='form-control' name="email" type="text" value="" size="30" placeholder="Your Email*" ng-model='email.email'/></td>
+						<td><input class='form-control' name="phone" type="text" value="" size="30" placeholder="Your Phone*" ng-model='email.phone'/></td>	
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input class="form-control" type="text" name="eventDate" placeholder="Event Date" ng-model='email.eventDate'/>
+						</td>
+					</tr>
+					<tr>						
+						<td colspan="2">
+							<textarea class='form-control' name="message" rows="7" cols="30" placeholder="Your message*" ng-model='email.body'></textarea><br>
+							<div class='row text-center' >
+								<a class='btn btn-danger' style='padding: 20px;font-size: 14px;' ng-click="sendEmail()">
+									POST INQUIRY
+								</a>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</form>
+<!--					<iframe src='contact.php' class='col-lg-12 col-md-12 col-sm-12 col-xs-12 contactForm' >
+	
+			</iframe>				-->
+		</div>
+</div>

@@ -1,0 +1,16 @@
+<div ng-show="isPromoActive && showPromo">
+	<div class='modal' ng-class="{active: (isPromoActive && showPromo)}"></div>
+	<div id='promoBox'>
+		<div ng-click="preparePromoEmail()" id='promoButton'>
+			<div class="row">PROMOTION</div>
+			<div class="row">BOOK BY JUN 20th, 2017</div>
+			<h1 class="row">GET 15% OFF</h1>
+			<div>
+				CLICK HERE TO REDEEM<br>PROMO CODE: {{promoCode}}
+				<logo-sm></logo-sm>
+			</div>
+		</div>
+		<div style='text-align: center;'><div class="btn btn-lrg btn-default" style="margin: 40px;padding: 15px 21px;border-radius: 60px" ng-click="showPromo=false">X</div></div>
+	</div>
+	
+</div>	
