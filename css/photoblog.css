@@ -4,15 +4,13 @@
 }
 .photoblog .foto{
 	background-color: #ccc;
-	outline: 1px solid #fff;
+	outline: 2px solid #fff;
 	display: inline-flex;
+	position: relative;
 }
-
-.bnr{
-	width:100%;
-	height:380px;
+.photoblog .foto.swapActive{
+	outline: 5px solid #9db4f9;
 }
-
 .foto.bnr{
 	width:100%;
 	height:400px;
@@ -46,4 +44,12 @@
 .foto.half{
 	width:50%;
 	height:640px;
+}
+
+.control-btn{
+	cursor: pointer;
+	color: #666;
+	text-decoration: underline;
+	width: 100%;
+	text-align:right;
 }

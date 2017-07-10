@@ -39,7 +39,12 @@
 	</nav>
 	<div class="photoblog" ng-controller='pbCtrl'>
 			<div class="foto" ng-repeat='p in fotos' ng-class='p.getClass()' ng-click='p.changeClass()'>
-				<h3>{{p.getClass()}}</h3>
+				<div class="clearfix">
+					<a class='control-btn' ng-click="setToSwap(p)">SWAP</a>
+				</div>
+				<div class="clearfix"  style="width: 100%;">
+					<h3>{{p.getClass()}} {{p.getImg()}} </h3>
+				</div>
 			</div>
 
 	</div>
