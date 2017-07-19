@@ -26,7 +26,7 @@ const menuArry = [
 
 var app = angular.module('app',[]);
 
-app.controller('ctrl',['$scope','$http','packages','teamSvc','$timeout', function($scope,$http,packages,teamSvc,$timeout){
+app.controller('ctrl',['$scope','$http','packages','teamSvc','videoSvc','$timeout', function($scope,$http,packages,teamSvc,videoSvc,$timeout){
 	//$scope.mobile = window.mobilecheck();
 	window.navOffsetTop = $('#menu').offset().top;
 	window.showMenu(0);
@@ -54,6 +54,7 @@ app.controller('ctrl',['$scope','$http','packages','teamSvc','$timeout', functio
 	
 	$scope.cMenu = 0;
 	
+
 	$scope.resetEmailRequest = function(){
 		$scope.email = {
 			"brideName":"",
@@ -94,6 +95,9 @@ app.controller('ctrl',['$scope','$http','packages','teamSvc','$timeout', functio
 	}
 	
 	$scope.pkg = packages.photo;
+	$scope.featureVideo = videoSvc.videos.feature.src;
+	$scope.videos = videoSvc.videos.links
+
 	$scope.teamMembers = teamSvc.members;
 	$scope.currentBio = null;
 
@@ -119,8 +123,9 @@ app.directive('logoSm',function(){
 								<img src="img\\logo\\wishtree.png"/>
 							</p>`	
 	}
-	
 })
+
+
 app.directive('pkgManager',function(){
 	return{
 		restrict: 'A',
@@ -197,3 +202,8 @@ app.controller('partners',['$scope','partnerSvc',function($scope,partnerSvc){
 	$scope.partners = partnerSvc.partners;
 }]);
 
+app.filter('trusted', ['$sce', function ($sce) {
+  return function(url) {
+    return $sce.trustAsResourceUrl(url);
+  };
+}])

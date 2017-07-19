@@ -21,6 +21,6 @@ app.controller('showcaseCtrl',['$scope','gallerySvc',function($scope,gallerySvc)
 
 	$scope.setPhotoVideo = function(index){
 		$scope.showcase=index;
-		$scope.$apply()
+		//setTimeout($scope.$apply());
 	}
 }])
