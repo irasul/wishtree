@@ -24,8 +24,6 @@ const menuArry = [
 	"#contact"
 ];
 
-var app = angular.module('app',[]);
-
 app.controller('ctrl',['$scope','$http','packages','teamSvc','videoSvc','$timeout', function($scope,$http,packages,teamSvc,videoSvc,$timeout){
 	//$scope.mobile = window.mobilecheck();
 	window.navOffsetTop = $('#menu').offset().top;
@@ -115,16 +113,6 @@ app.controller('ctrl',['$scope','$http','packages','teamSvc','videoSvc','$timeou
 	
 
 }]);
-
-app.directive('logoSm',function(){
-	return{
-		restrict:"E",
-		template: `<p style='text-align:center'>
-								<img src="img\\logo\\wishtree.png"/>
-							</p>`	
-	}
-})
-
 
 app.directive('pkgManager',function(){
 	return{

@@ -1,0 +1,22 @@
+#left-panel, #right-panel{
+	position: fixed;
+	height: 100%;
+	padding: 50px;
+}
+#input-wrapper{
+	padding: 20%;
+	position: relative;
+}
+#right-panel{
+	width: 60%;
+	right: 0;
+	background-color: #fff;	
+}
+#left-panel{
+	width: 40%;
+	background-color: #129e9d;	
+}
+
+#left-panel input{
+	margin: 10px 0px;
+}
