@@ -25,14 +25,13 @@ function SubmitButtonControler($scope,$http){
 
 	  const promise = $http({
 	  	url: '../auth/authenticate.php',
-	  	data: request,
 	  	type: "POST",
-      data: JSON.stringify({data:$scope.email}),
+      data: JSON.stringify({data:request}),
 	  });
 
 	  promise.then(function(response){
 	  	const data = JSON.parse(JSON.stringify(eval(response))).data;
-	  	window.location = '../contracts/';
+	  	window.location = '../contracts/home.php';
 	  });
 	}
 }
