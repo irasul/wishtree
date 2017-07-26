@@ -20,9 +20,9 @@
 		<div class="row clearfix">
 			<div id="left-panel" ng-controller='authCtrl' class="text-center">
 				<div class="clearfix" id='input-wrapper'>
-					<input type="text" name="username" class="form-control" placeholder="user name">
-					<input type="password" name="password" class="form-control"  placeholder="password">
-					<a type="submit" name="submit" class="btn btn-success btn-lg">Let's Go!</a>
+					<input type="text" id="username" class="form-control" placeholder="user name" ng-model='username'>
+					<input type="password" id="password" class="form-control"  placeholder="password" ng-model='password'>
+					<a name="submit" class="btn btn-success btn-lg" submit-button>Let's Go!</a>
 				</div>
 			</div>
 		</div>
