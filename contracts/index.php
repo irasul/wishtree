@@ -6,6 +6,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	<script src="../js/initNg.js"></script>
+	<script src="../js/wt-api.js"></script>
 	<script src="../js/auth.js"></script>
 	<script src="../js/logo.js"></script>
 

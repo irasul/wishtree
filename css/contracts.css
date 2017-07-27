@@ -6,4 +6,73 @@
 	font-weight: normal;
 	width: 60%;
 	text-align: left;
+	vertical-align: middle;
+}
+.btn-contract:hover .glyphicon.glyphicon-cloud-download:before{
+	color: #ad7d2d;
+}
+.btn-contract .glyphicon.glyphicon-cloud-download:before{
+	margin-right: 5px;
+	color: #7d7d7d;
+	font-size: 22px;
+	transition: all .4s ease;
+	-webkit-transition: all .s ease;
+
+}
+
+#contractMenu{
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	width: 200px;
+	padding: 0px;
+	margin-left: -20px;
+	margin-top: 10px;
+
+	box-shadow: 3px 3px 3px #999;
+	outline: 1px solid #c1c1c1;
+}
+#contractMenu:before{
+	content: "";
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent transparent #c1c1c1 transparent;
+	position: absolute;
+	margin-left: 50px;
+	margin-top: -20px;
+}
+#contractMenu li{
+	list-style-type: none;
+	padding: 10px;
+	border-bottom: 1px solid #c1c1c1;
+	font-size: 12px;
+}
+#contractMenu li:last-of-type{
+	border-bottom: 0px;
+}
+#contractMenu li:hover{
+	background-color: #F3F3F3;
+	color: #ad7d2d;
+}
+#newContractMenu{
+	position: relative;	
+}
+#newContractMenu:hover #contractMenu{
+	display: block;
+}
+
+.container-sm{
+	width: 50%;
+	border-radius: 4px;
+	background-color: #fff;
+	box-shadow: 3px 3px 3px #000;
+}
+
+.container-sm input{
+	margin-bottom: 10px; 
+}
+
+.error{
+	color: #f5644d;
+	border-color: #f5644d;
 }

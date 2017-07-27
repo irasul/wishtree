@@ -19,15 +19,11 @@ app.directive('submitButton',function(){
 	}
 })
 
-function SubmitButtonControler($scope,$http){
+function SubmitButtonControler($scope,$http,api){
 	this.submit = function(){
 		const request = {'u':username.value,'p':password.value};
 
-	  const promise = $http({
-	  	url: '../auth/authenticate.php',
-	  	type: "POST",
-      data: JSON.stringify({data:request}),
-	  });
+	  const promise = api.authenticate(request);
 
 	  promise.then(function(response){
 	  	const data = JSON.parse(JSON.stringify(eval(response))).data;

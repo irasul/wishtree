@@ -14,6 +14,8 @@
 	<script src='../js/initNg.js'></script>
 	<script src="../js/wt.js"></script>
 	<script src="../js/logo.js"></script>
+	<script src="../js/wt-api.js"></script>
+	<script src='../js/packageSvc.js'></script>
 	<script src="../js/contracts.js"></script>
 
 	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'/>
@@ -24,7 +26,10 @@
 	<link rel='stylesheet' href='../css/wt.css'/>
 	<link rel='stylesheet' href='../css/contracts.css'/>
 </head>
-<body ng-app='app'>
+<body ng-app='app' ng-controller='contractsCtrl'>
+	<div class="modal" ng-class={active:showModal}></div>
+	<new-client-form></new-client-form>
+	<new-contract-form></new-contract-form>
 	<nav class='nav navbar' id='menu'>
 		<div class='container'>
 			<ul class="nav nav-tabs pull-left">
@@ -33,20 +38,28 @@
 			  <div class='clearfix' style='padding-top:25px'>
 			</ul>
 			<ul class="nav nav-tabs pull-right" style='margin-top:25px;' id="main-menu">  
-				  <li role="presentation" ><a href='../logout.php'>Logout</a></li>
+				  <li role="presentation" ><a create-client>New Client</a></li>
+				  <li role="presentation" >
+				  	<a id="newContractMenu">New Contract
+					  	<ul id='contractMenu'>
+					  		<li create-contract ng-repeat='cn in contractTypes' newContract='cn'><span class="{{cn.menuClass}}"></span> &nbsp;{{cn.name}}</li>
+					  	</ul>	
+				  	</a>
+				  </li>
+					<li role="presentation" ><a href='../logout.php'>Logout</a></li>				  
 			</ul>
 		</div>
 	</nav>
-	<div class="container" ng-controller='contractsCtrl'>
+	<div class="container">
 		<h3 role="presentation" >
-			Download My Contract(s)
+			Download Contract(s)
 		</h3>
 		<hr>
 		<div ng-repeat='c in userContracts' contract='c' download-contract class='btn btn-default btn-lg btn-contract'>
-			<span>{{c.ContractName+' '+c.Type}}</span>
+			<span class="glyphicon glyphicon-cloud-download"></span><span>{{c.ContractName+' '+c.Type}}</span>
 		</div>
 		<hr>
-		<h3>Enent Details</h3>
+		<h3>Event Details</h3>
 
 		<hr>
 

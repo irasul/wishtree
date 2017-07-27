@@ -1,0 +1,14 @@
+<div class="modalBox" ng-class='{active:newClientFormView}'>
+	<div class="container container-sm">
+		<h3>New Client</h3>
+		<form class="form-group">
+			<input class='form-control' type="text" ng-model="clientName" placeholder="Name">
+			<input class='form-control' type="password" ng-class="{'error':pass1!=pass2}" ng-model="pass1" placeholder="password">
+			<input class='form-control' type="password" ng-class="{'error':pass1!=pass2}" ng-model="pass2" placeholder="re-type password">
+			<div>
+				<a class='btn btn-success btn-sm'>Create Client</a>
+				<a class='btn btn-default btn-sm' ng-click='ctrl.dismiss()'>Cancel</a>
+			</div>			
+		</form>
+	</div>	
+</div>
