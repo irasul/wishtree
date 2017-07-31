@@ -1,4 +1,4 @@
-app.controller('authCtrl',['$scope','$http',function($scope,$http){
+app.controller('AuthCtrl',['$scope','$http',function($scope,$http){
 	$scope.username = "ABC";
 	$scope.password = "123";
 

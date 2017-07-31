@@ -76,3 +76,12 @@
 	color: #f5644d;
 	border-color: #f5644d;
 }
+
+#contract-detail-table td{
+	padding: 3px;
+	border: none;
+}
+#contract-detail-table input{
+	border-radius: 4px;
+	margin: 2px;
+}

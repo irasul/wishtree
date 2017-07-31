@@ -106,28 +106,33 @@ app.service('packages',function(){
 		}
 	}
 
+	this.getPackageDetailsById = function(id){
+		let id_string = new String(id);
+		const map = id_string.split(".");
+		return this[map[0]][map[1]][map[2]];
+	}
 	this.getAllContractTypes = function(){
 		this.contractType	= [];
 		let i = 1;
 		
 		let pkg = this.photo.packageNames.Daily;
 		for(p in pkg){
-			this.contractType.push({id:i, name:'Photo - Daily - '+pkg[p], menuClass: 'glyphicon glyphicon-camera'});
+			this.contractType.push({id:'photo.Daily.'+pkg[p], name:'Photo - Daily - '+pkg[p], menuClass: 'glyphicon glyphicon-camera'});
 			i++;
 		}
 		pkg = this.photo.packageNames.Hourly;
 		for(p in pkg){
-			this.contractType.push({id:i, name:'Photo - Hourly - '+pkg[p], menuClass: 'glyphicon glyphicon-camera'});
+			this.contractType.push({id:'photo.Hourly.'+pkg[p], name:'Photo - Hourly - '+pkg[p], menuClass: 'glyphicon glyphicon-camera'});
 			i++;
 		}
 		pkg = this.video.packageNames.Daily;
 		for(p in pkg){
-			this.contractType.push({id:i, name:'Video - Daily - '+pkg[p], menuClass:'glyphicon glyphicon-film'});
+			this.contractType.push({id:'video.Daily.'+pkg[p], name:'Video - Daily - '+pkg[p], menuClass:'glyphicon glyphicon-film'});
 			i++;
 		}
 		pkg = this.video.packageNames.Hourly;
 		for(p in pkg){
-			this.contractType.push({id:i, name:'Video - Hourly - '+pkg[p], menuClass:'glyphicon glyphicon-film'});
+			this.contractType.push({id:'video.Hourly.'+pkg[p], name:'Video - Hourly - '+pkg[p], menuClass:'glyphicon glyphicon-film'});
 			i++;
 		}
 		return this.contractType;
