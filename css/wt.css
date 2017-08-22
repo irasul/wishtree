@@ -481,7 +481,7 @@ hr{
 	background-color: rgba(109, 57, 57, .5);
 	padding: 50px;
 }
-#contactForm input.form-control, textarea.form-control{
+#contactForm input.form-control, #contactForm textarea.form-control{
 	border-radius:0px;
 	border: 1px solid #ccc;
 	background-color: rgba(156, 114, 96, .7);

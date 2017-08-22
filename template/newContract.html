@@ -1,93 +1,40 @@
 <div class="modalBox" ng-class='{active:newContractFormView}'>
 	<div class="container container-sm">
 		<h3>New Contract</h3>
-		<form class="form-group">
-			<input class='form-control' type="text" ng-model="clientName" placeholder="Name">
-			<!--Day 1 -->
-			<table class="table" id='contract-detail-table'>
-				<tr>
-					<td>
-					<div class="input-group" moment-picker="ctrl2.contract.day1" format="YYYY-MM-DD">
-				  		<input class="form-control" placeholder="Day 1" ng-model="ctrl2.contract.day1">
+		<form class="form-group" id='contract-detail-table'>
+			<input class='form-control' type="text" ng-model="clientName" placeholder="Client Name">
+			<div class="row clearfix" style="padding:10px 0px;">
+				<a ng-repeat='day in ctrl2.contract.days track by $index' class='days' ng-class='{active:ctrl2.activeDay == $index}' ng-click='ctrl2.activeDay=$index'>{{'Day'+($index+1)}}</a>	
+			</div>
+
+			<div ng-repeat='day in ctrl2.contract.days track by $index' class="ng-hide" ng-show="ctrl2.activeDay == $index">
+					<div class="input-group" moment-picker="day[$index].day" format="YYYY-MM-DD">
+				  		<input class="form-control" placeholder="{{'Day '+($index+1)}}" ng-model="day[$index].day">
 					</div>
-					</td>
-					<td>
+					
 					<div class="input-group"
-					     moment-picker="ctrl2.stime1"
+					     moment-picker="day[$index].stime"
 					     format="HH:mm:ss">
 					        <input class="form-control"
-					           placeholder="Start time"
-					           ng-model="ctrl2.stime1"
+					           placeholder="{{'Start time '+($index+1)}}"
+					           ng-model="day[$index].stime"
 					           ng-model-options="{ updateOn: 'blur' }">
 					</div>
 					<div class="input-group"
-					     moment-picker="ctrl2.etime1"
+					     moment-picker="day[$index].etime"
 					     format="HH:mm:ss">
 					    <input class="form-control"
-					           placeholder="End time"
-					           ng-model="ctrl2.etime1"
+					           placeholder="{{'End time '+($index+1)}}"
+					           ng-model="day[$index].etime"
 					           ng-model-options="{ updateOn: 'blur' }">
 					</div>			
-					</td>
-				</tr>
-
-				<!--Day 2 -->
-				<tr>
-					<td>
-						<div class="input-group" moment-picker="ctrl2.contract.day2" format="YYYY-MM-DD">
-					  	<input class="form-control" placeholder="Day 2" ng-model="ctrl2.contract.day2">
-						</div>
-					</td>
-					<td>
-						<div class="input-group"
-						     moment-picker="ctrl2.stime2"
-						     format="HH:mm:ss">
-						    
-						        <input class="form-control"
-						           placeholder="Start time"
-						           ng-model="ctrl2.stime2"
-						           ng-model-options="{ updateOn: 'blur' }">
-						</div>
-						<div class="input-group"
-						     moment-picker="ctrl2.etime2"
-						     format="HH:mm:ss">
-						    
-						         <input class="form-control"
-						           placeholder="End time"
-						           ng-model="ctrl2.etime2"
-						           ng-model-options="{ updateOn: 'blur' }">
-						
-						</div>	
-					</td>
-				<!--Day 3 -->
-				</tr>
-				<tr>
-					<td>
-						<div class="input-group" moment-picker="ctrl2.contract.day3" format="YYYY-MM-DD">
-						  	<input class="form-control" placeholder="Day 3" ng-model="ctrl2.contract.day2">
-						</div>
-					</td>
-					<td>
-						<div class="input-group"
-						     moment-picker="ctrl2.stime3"
-						     format="HH:mm:ss">
-						    
-						    <input class="form-control"
-						    	placeholder="Start time"
-									ng-model="ctrl2.stime3"
-									ng-model-options="{ updateOn: 'blur' }">
-						</div>
-						<div class="input-group"
-						     moment-picker="ctrl2.etime3"
-						     format="HH:mm:ss">
-									<input class="form-control"
-										placeholder="End time"
-										ng-model="ctrl2.etime3"
-										ng-model-options="{ updateOn: 'blur' }">
-						</div>
-					</td>
-				</tr>
-			</table>
+					
+			    <textarea class="form-control" style="width:100%;height: 50px;" 
+			           placeholder="{{'Venue '+($index+1)}}"
+			           ng-model="day[$index].venue"
+			           ng-model-options="{ updateOn: 'blur' }"></textarea>
+			
+			</div>
 			<div>
 				<h4>Package Details:</h4>
 				<ul>
@@ -96,7 +43,7 @@
 
 			</div>
 			<div>
-				<a class='btn btn-success btn-sm'>Create Client</a>
+				<a class='btn btn-success btn-sm'>Create Contract</a>
 				<a class='btn btn-default btn-sm' ng-click='ctrl2.dismiss()'>Cancel</a>
 			</div>			
 		</form>

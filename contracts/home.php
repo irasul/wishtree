@@ -27,7 +27,8 @@
 	<link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
 	<link rel='stylesheet' href='../css/wt.css'/>
 	<link rel='stylesheet' href='../css/contracts.css'/>
-	<link rel="stylesheet" href="../css/moment/moment.min.css">
+	<link rel="stylesheet" href="../js/moment/moment.min.css">
+	<link rel="stylesheet" href="../js/moment/themes/material-ui.min.css">
 </head>
 <body ng-app='app' ng-controller='ContractsCtrl'>
 	<div class="modal" ng-class={active:showModal}></div>

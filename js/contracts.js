@@ -112,18 +112,15 @@ function modalClientCtrl($scope,api){
 
 function modalContractCtrl($scope,api){
 	this.scope = $scope;
+	this.activeDay = 0;
 
 	this.contract = {
 		'client':"",
-		'day1':"",
-		'day2':"",
-		'day3':"",
-		'stime1':"",
-		'stime2':"",
-		'stime3':"",
-		'etime1':"",
-		'etime2':"",
-		'etime3':"",
+		'days':[
+							{'day':"",'stime':"",'etime':"",'venue':"", 'index':0},
+							{'day':"",'stime':"",'etime':"",'venue':"", 'index':1},
+							{'day':"",'stime':"",'etime':"",'venue':"", 'index':2}
+		],
 		'details': ''
 	}
 
