@@ -5,6 +5,7 @@ app.service("videoSvc",function(){
 			src:"https://player.vimeo.com/video/226029706",
 		},	
 		links:[
+						"https://player.vimeo.com/video/228748834",
 						"https://player.vimeo.com/video/224790695",
 						"https://player.vimeo.com/video/209650599",
 						"https://player.vimeo.com/video/203751361",
