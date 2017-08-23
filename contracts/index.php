@@ -5,6 +5,8 @@
 	<title>WishTree Cinemas | Contracts</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.js"></script>
+	<script src="../js/moment/moment.min.js"></script>
 	<script src="../js/initNg.js"></script>
 	<script src="../js/wt-api.js"></script>
 	<script src="../js/auth.js"></script>
@@ -16,10 +18,11 @@
 	<link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
 	<link rel='stylesheet' href='../css/wt.css'/>
 	<link rel='stylesheet' href='../css/auth.css'/>
+	<link rel="stylesheet" href="../css/moment/moment.min.css">
 </head>
 	<body ng-app="app">
 		<div class="row clearfix">
-			<div id="left-panel" ng-controller='authCtrl' class="text-center">
+			<div id="left-panel" ng-controller='AuthCtrl' class="text-center">
 				<div class="clearfix" id='input-wrapper'>
 					<input type="text" id="username" class="form-control" placeholder="user name" ng-model='username'>
 					<input type="password" id="password" class="form-control"  placeholder="password" ng-model='password'>

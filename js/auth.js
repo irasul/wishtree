@@ -1,4 +1,4 @@
-app.controller('authCtrl',['$scope','$http',function($scope,$http){
+app.controller('AuthCtrl',['$scope','$http',function($scope,$http){
 	$scope.username = "ABC";
 	$scope.password = "123";
 
@@ -27,7 +27,8 @@ function SubmitButtonControler($scope,$http,api){
 
 	  promise.then(function(response){
 	  	const data = JSON.parse(JSON.stringify(eval(response))).data;
-	  	window.location = '../contracts/home.php';
+	  	console.log(data);
+	  	//window.location = '../contracts/home.php';
 	  });
 	}
 }

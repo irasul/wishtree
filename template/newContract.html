@@ -1,13 +1,103 @@
 <div class="modalBox" ng-class='{active:newContractFormView}'>
 	<div class="container container-sm">
-		<h3>New Client</h3>
+		<h3>New Contract</h3>
 		<form class="form-group">
 			<input class='form-control' type="text" ng-model="clientName" placeholder="Name">
-			<input class='form-control' type="password" ng-model="ctrl.pass1" placeholder="password">
-			<input class='form-control' type="password" ng-model="ctrl.pass2" placeholder="re-type password">
+			<!--Day 1 -->
+			<table class="table" id='contract-detail-table'>
+				<tr>
+					<td>
+					<div class="input-group" moment-picker="ctrl2.contract.day1" format="YYYY-MM-DD">
+				  		<input class="form-control" placeholder="Day 1" ng-model="ctrl2.contract.day1">
+					</div>
+					</td>
+					<td>
+					<div class="input-group"
+					     moment-picker="ctrl2.stime1"
+					     format="HH:mm:ss">
+					        <input class="form-control"
+					           placeholder="Start time"
+					           ng-model="ctrl2.stime1"
+					           ng-model-options="{ updateOn: 'blur' }">
+					</div>
+					<div class="input-group"
+					     moment-picker="ctrl2.etime1"
+					     format="HH:mm:ss">
+					    <input class="form-control"
+					           placeholder="End time"
+					           ng-model="ctrl2.etime1"
+					           ng-model-options="{ updateOn: 'blur' }">
+					</div>			
+					</td>
+				</tr>
+
+				<!--Day 2 -->
+				<tr>
+					<td>
+						<div class="input-group" moment-picker="ctrl2.contract.day2" format="YYYY-MM-DD">
+					  	<input class="form-control" placeholder="Day 2" ng-model="ctrl2.contract.day2">
+						</div>
+					</td>
+					<td>
+						<div class="input-group"
+						     moment-picker="ctrl2.stime2"
+						     format="HH:mm:ss">
+						    
+						        <input class="form-control"
+						           placeholder="Start time"
+						           ng-model="ctrl2.stime2"
+						           ng-model-options="{ updateOn: 'blur' }">
+						</div>
+						<div class="input-group"
+						     moment-picker="ctrl2.etime2"
+						     format="HH:mm:ss">
+						    
+						         <input class="form-control"
+						           placeholder="End time"
+						           ng-model="ctrl2.etime2"
+						           ng-model-options="{ updateOn: 'blur' }">
+						
+						</div>	
+					</td>
+				<!--Day 3 -->
+				</tr>
+				<tr>
+					<td>
+						<div class="input-group" moment-picker="ctrl2.contract.day3" format="YYYY-MM-DD">
+						  	<input class="form-control" placeholder="Day 3" ng-model="ctrl2.contract.day2">
+						</div>
+					</td>
+					<td>
+						<div class="input-group"
+						     moment-picker="ctrl2.stime3"
+						     format="HH:mm:ss">
+						    
+						    <input class="form-control"
+						    	placeholder="Start time"
+									ng-model="ctrl2.stime3"
+									ng-model-options="{ updateOn: 'blur' }">
+						</div>
+						<div class="input-group"
+						     moment-picker="ctrl2.etime3"
+						     format="HH:mm:ss">
+									<input class="form-control"
+										placeholder="End time"
+										ng-model="ctrl2.etime3"
+										ng-model-options="{ updateOn: 'blur' }">
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div>
+				<h4>Package Details:</h4>
+				<ul>
+					<li ng-repeat='i in ctrl2.contract.details'>{{i}}</li>
+				</ul>
+
+			</div>
 			<div>
 				<a class='btn btn-success btn-sm'>Create Client</a>
-				<a class='btn btn-default btn-sm' ng-click='ctrl.dismiss()'>Cancel</a>
+				<a class='btn btn-default btn-sm' ng-click='ctrl2.dismiss()'>Cancel</a>
 			</div>			
 		</form>
 	</div>	

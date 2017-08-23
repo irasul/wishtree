@@ -11,6 +11,8 @@
 	<script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src="https://www.google-analytics.com/analytics.js",s.parentNode.insertBefore(o,s)}(window,document,"script",0,"ga"),ga("create","UA-100340149-1","auto"),ga("send","pageview");</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.js"></script>
+	<script src="../js/moment/moment.min.js"></script>
 	<script src='../js/initNg.js'></script>
 	<script src="../js/wt.js"></script>
 	<script src="../js/logo.js"></script>
@@ -25,8 +27,9 @@
 	<link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
 	<link rel='stylesheet' href='../css/wt.css'/>
 	<link rel='stylesheet' href='../css/contracts.css'/>
+	<link rel="stylesheet" href="../css/moment/moment.min.css">
 </head>
-<body ng-app='app' ng-controller='contractsCtrl'>
+<body ng-app='app' ng-controller='ContractsCtrl'>
 	<div class="modal" ng-class={active:showModal}></div>
 	<new-client-form></new-client-form>
 	<new-contract-form></new-contract-form>
@@ -42,7 +45,7 @@
 				  <li role="presentation" >
 				  	<a id="newContractMenu">New Contract
 					  	<ul id='contractMenu'>
-					  		<li create-contract ng-repeat='cn in contractTypes' newContract='cn'><span class="{{cn.menuClass}}"></span> &nbsp;{{cn.name}}</li>
+					  		<li create-contract ng-repeat='cn in contractTypes' contractId='{{cn.id}}'><span class="{{cn.menuClass}}"></span> &nbsp;{{cn.name}}</li>
 					  	</ul>	
 				  	</a>
 				  </li>
