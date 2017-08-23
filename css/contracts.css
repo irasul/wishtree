@@ -117,3 +117,10 @@
 	height: 50px;
 	margin: 3px 2px;
 }
+#priceTable label:after{
+	content: ":"
+}
+#priceTable label{
+	font-size: 14px;
+	padding-right: 5px;
+}

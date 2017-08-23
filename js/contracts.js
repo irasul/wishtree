@@ -132,9 +132,15 @@ function modalContractCtrl($scope,api){
 							{'day':"",'stime':"",'etime':"",'venue':"" }
 		],
 		'details': '',
-		'notes':''
+		'notes':'',
+		'price': 0.00,
+		'initPayment': 0.00,
+		'dueAmount': 0.00
 	}
 
+	this.updateDueAmount = function(){
+		this.contract.dueAmount = this.contract.price - this.contract.initPayment;
+	}
 	this.dismiss = function(){
 		this.scope.showModal = false;
 		this.scope.newContractFormView = false;

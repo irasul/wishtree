@@ -48,7 +48,34 @@
 				           ng-model-options="{ updateOn: 'blur' }"></textarea>
 				</div>
 			</div>
-			
+			<table id='priceTable'>
+			<tr>
+				<td>
+					<label class="input-group">Price</label>
+				</td>
+				<td>
+					<input class='form-control' type="number" step=2 ng-model='ctrl2.contract.price' placeholder="Price" ng-blur='ctrl2.updateDueAmount()'/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label class="input-group">Initial Paymment</label>
+				</td>
+				<td>
+					<input class='form-control' type="number" step=2 ng-model='ctrl2.contract.initPayment' placeholder="Initial Payment" ng-blur='ctrl2.updateDueAmount()'/>
+					<input type="hidden" step=2 ng-model='ctrl2.contract.dueAmount'>
+				</td>
+			</tr>	
+			<tr>
+				<td>
+					<label class="input-group">Due Amount</label>
+				</td>
+				<td>
+					<label>${{ctrl2.contract.dueAmount}}</label>
+				</td>
+			</tr>
+							
+			</table>
 			<textarea class="form-control" 
 		           placeholder="Notes"
 		           ng-model="ctrl2.contract.notes"
