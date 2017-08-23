@@ -50,4 +50,19 @@ app.service('api',function($http){
 	  });
 	}
 
+	this.getClients = function(){
+		return [
+			{id:1,name:'ABC'},
+			{id:2,name:'XYZ'},
+			{id:3,name:'PQR'},
+			{id:4,name:'MSN'},
+			{id:5,name:'BBC'}
+		];
+	}
+	this.saveClient = function(){
+
+	}
+	this.saveContract = function(){
+
+	}
 })
