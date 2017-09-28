@@ -54,12 +54,20 @@
 			</ul>
 		</div>
 	</nav>
+
 	<div class="container">
+		<h3 role="presentation" >
+			New Contract(s)
+		</h3>
+		<hr>
+		<div ng-repeat='c in newUserContracts' contract='c' load-contract contractId='{{c.id}}' class='btn btn-default btn-lg btn-contract'>
+			<span class="glyphicon glyphicon-star"></span><span>{{c.ContractName+' '+c.Type}}</span>
+		</div>
 		<h3 role="presentation" >
 			Download Contract(s)
 		</h3>
 		<hr>
-		<div ng-repeat='c in userContracts' contract='c' download-contract class='btn btn-default btn-lg btn-contract'>
+		<div ng-repeat='c in acceptedUserContracts' contract='c' download-contract class='btn btn-default btn-lg btn-contract'>
 			<span class="glyphicon glyphicon-cloud-download"></span><span>{{c.ContractName+' '+c.Type}}</span>
 		</div>
 		<hr>

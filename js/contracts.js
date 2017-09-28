@@ -1,6 +1,7 @@
 app.controller('ContractsCtrl',['$scope','$http','packages','api',function($scope,$http,packages,api){
 
-	$scope.userContracts = api.getMyContracts();
+	$scope.acceptedUserContracts = api.getMyContracts();
+	$scope.newUserContracts = api.getNewContracts();
 	$scope.contractTypes = packages.getAllContractTypes();
 	$scope.showModal = false;
 	$scope.newClientFormView = false;
@@ -45,9 +46,6 @@ app.directive('createClient',function(){
 		restrict: 'A',
 		controller: createClientCtrl,
 		controllerAs: 'ctrlClient',
-		scope:{
-			contract:"="
-		},
 		bindToController: true,
 	  link: (scope, ele, attr) => {
       ele.on('click', function(e){
@@ -66,7 +64,27 @@ app.directive('createContract',function(){
 		bindToController: true,
 	  link: (scope, ele, attr) => {
       ele.on('click', function(e){
+      	scope.ctrlContract.readonly = false;
         scope.ctrlContract.create();
+      });
+	  }
+	}
+})
+
+app.directive('loadContract',function(){
+	return{
+		restrict: 'A',
+		controller: createContractCtrl,
+		controllerAs: 'ctrlContract',
+		bindToController: true,
+		scope:{
+			contract:"="
+		},
+	  link: (scope, ele, attr) => {
+      ele.on('click', function(e){
+      	scope.ctrlContract.readonly = true;
+      	scope.ctrlContract.contract = scope.contract;
+        scope.ctrlContractctrlContract.create();
       });
 	  }
 	}
@@ -123,20 +141,22 @@ function modalContractCtrl($scope,api){
 	this.scope = $scope;
 	this.activeDay = 0;
 	this.clientList = api.getClients();
-	this.contract = {
-		'client':"",
-		'id':"",
-		'days':[
-							{'day':"",'stime':"",'etime':"",'venue':"" },
-							{'day':"",'stime':"",'etime':"",'venue':"" },
-							{'day':"",'stime':"",'etime':"",'venue':"" }
-		],
-		'details': '',
-		'notes':'',
-		'price': 0.00,
-		'initPayment': 0.00,
-		'dueAmount': 0.00
-	}
+	if(!this.contract){
+			this.contract = {
+				'client':"",
+				'id':"",
+				'days':[
+									{'day':"",'stime':"",'etime':"",'venue':"" },
+									{'day':"",'stime':"",'etime':"",'venue':"" },
+									{'day':"",'stime':"",'etime':"",'venue':"" }
+				],
+				'details': '',
+				'notes':'',
+				'price': 0.00,
+				'initPayment': 0.00,
+				'dueAmount': 0.00
+			}
+		}
 
 	this.updateDueAmount = function(){
 		this.contract.dueAmount = this.contract.price - this.contract.initPayment;
@@ -145,6 +165,7 @@ function modalContractCtrl($scope,api){
 		this.scope.showModal = false;
 		this.scope.newContractFormView = false;
 	}
+
 	this.saveContract = function(){
 		const request = this.contract;	
 		const contractSavePromise = api.saveContract(request);

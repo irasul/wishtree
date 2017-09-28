@@ -20,16 +20,6 @@ Interesting fact about Iftakhar- He drinks orange juice with salt & he loves Mac
 			picUrl   : "img/team/i.jpg",
 
 		},
-		2:{
-			fullname : 'Yaman Syed',
-			firstName: 'Yaman', 
-			title    : 'Sr. Cinematographer',
-			about    : `Yaman’s the man behind all the crazy creative shots. He doesn't mind getting down and dirty or climbing a tree and enduring a few war-wounds on the way. And the results are breath-taking angles and eye-popping compositions. His cinematography at times will leave you speechless. What makes Wishtree special in his opinion is the passion that goes into executing every project, and passion breads perfection. 
-			Yaman’s ideal superhero is Ironman because he is smart, rich and sarcastic and doesn't wear a cape. He is a big fan of the show “Breaking bad”. 
-			Yaman is obsessed with both music and videography. He is also an accomplished pianist.`,
-			picUrl   : "img/team/placeholder.png",
-
-		},
 		3:{
 			fullname : 'Ashiqul Alam',
 			firstName: 'Ashiqul', 
@@ -38,24 +28,6 @@ Interesting fact about Iftakhar- He drinks orange juice with salt & he loves Mac
 			He likes the TV show “Dexter” and fittingly he is pretty dexterous at his job. 
 			Interestingly, he claims that his brain sometimes deliberately makes him forget things and that drives him crazy! Interesting indeed… doesn’t yours?`,
 			picUrl   : "img/team/a.jpg",
-
-		},
-		4:{
-			fullname : 'Mahfuz Rahman',
-			firstName: 'Mahfuz', 
-			title    : 'Sr. Photographer',
-			about    : `With WishTree since 2014`,
-			picUrl   : "img/team/m.jpg",
-
-		},
-		5:{
-			fullname : 'Omar Alsayyed',
-			firstName: 'Omar', 
-			title    : 'Photographer',
-			about    : `The multi-talented Omar is the whizz-kid behind the candid photos. Omar very humbly states that it is him what makes WishTree special. Omar in all true sense is an unyielding force of nature. Be it photography, public relation or marketing. He wants to do it all. This master of many trades wishes that if he could have any superpower, it would be to a clairvoyant—it would make for a foolproof photoshoot prep. 
-			He like the TV show “Friends” – explains his friendly nature of course and “The Crown” – because clearly he is the crowned price of WishTree. 
-			An interesting fact: He is a Drake look-alike… only part-time though… only when he shaves… and gets a low fade… urgh.. alright!!`,
-			picUrl   : "img/team/placeholder.png",
 
 		},
 		6:{
@@ -83,7 +55,36 @@ Interesting fact about Iftakhar- He drinks orange juice with salt & he loves Mac
 			about    : `Hasan is WishTree Cinema’s prized videographer with a style consisting of colorful and energetic content. Wishtree in his opinion is a place where photo enthusiasts gathered to redefine wedding cinematography and photography. The dedication, motivation, eagerness to change and improve shines in their work because they all they do what they love and they love what they do. If Hasan could have any superpower, it would be the power to predict the future so he can protect his family and friends and keep them out of danger. Favourite TV Shows- Game Of Thrones, The Big Bang Theory Interesting Facts about Hasan- He loves to travel, drive, play the guitar, and sing. He wants to learn to fly a plane and drive race cars.`,
 			picUrl   : "img/team/sh.jpg",
 
+		},
+		5:{
+			fullname : 'Omar Alsayyed',
+			firstName: 'Omar', 
+			title    : 'Photographer',
+			about    : `The multi-talented Omar is the whizz-kid behind the candid photos. Omar very humbly states that it is him what makes WishTree special. Omar in all true sense is an unyielding force of nature. Be it photography, public relation or marketing. He wants to do it all. This master of many trades wishes that if he could have any superpower, it would be to a clairvoyant—it would make for a foolproof photoshoot prep. 
+			He like the TV show “Friends” – explains his friendly nature of course and “The Crown” – because clearly he is the crowned price of WishTree. 
+			An interesting fact: He is a Drake look-alike… only part-time though… only when he shaves… and gets a low fade… urgh.. alright!!`,
+			picUrl   : "img/team/placeholder.png",
+
+		},
+		2:{
+			fullname : 'Yaman Syed',
+			firstName: 'Yaman', 
+			title    : 'Sr. Cinematographer',
+			about    : `Yaman’s the man behind all the crazy creative shots. He doesn't mind getting down and dirty or climbing a tree and enduring a few war-wounds on the way. And the results are breath-taking angles and eye-popping compositions. His cinematography at times will leave you speechless. What makes Wishtree special in his opinion is the passion that goes into executing every project, and passion breads perfection. 
+			Yaman’s ideal superhero is Ironman because he is smart, rich and sarcastic and doesn't wear a cape. He is a big fan of the show “Breaking bad”. 
+			Yaman is obsessed with both music and videography. He is also an accomplished pianist.`,
+			picUrl   : "img/team/placeholder.png",
+
 		}
 	}
 
 });
+
+/*4:{
+			fullname : 'Mahfuz Rahman',
+			firstName: 'Mahfuz', 
+			title    : 'Sr. Photographer',
+			about    : `With WishTree since 2014`,
+			picUrl   : "img/team/m.jpg",
+
+		},*/

@@ -48,13 +48,15 @@
 				           ng-model-options="{ updateOn: 'blur' }"></textarea>
 				</div>
 			</div>
+			<a ng-click='readonly=!readonly'>readonly</a> 
 			<table id='priceTable'>
 			<tr>
 				<td>
 					<label class="input-group">Price</label>
 				</td>
 				<td>
-					<input class='form-control' type="number" step=2 ng-model='ctrl2.contract.price' placeholder="Price" ng-blur='ctrl2.updateDueAmount()'/>
+					<input ng-if='!readonly' class='form-control' type="number" step=2 ng-model='ctrl2.contract.price' placeholder="Price" ng-blur='ctrl2.updateDueAmount()'/>
+					<span ng-if='readonly' class="number-label">${{ctrl2.contract.price}}</span>
 				</td>
 			</tr>
 			<tr>
@@ -62,7 +64,8 @@
 					<label class="input-group">Initial Paymment</label>
 				</td>
 				<td>
-					<input class='form-control' type="number" step=2 ng-model='ctrl2.contract.initPayment' placeholder="Initial Payment" ng-blur='ctrl2.updateDueAmount()'/>
+					<input ng-if='!readonly' class='form-control' type="number" step=2 ng-model='ctrl2.contract.initPayment' placeholder="Initial Payment" ng-blur='ctrl2.updateDueAmount()'/>
+					<span ng-if='readonly' class="number-label">${{ctrl2.contract.initPayment}}</span>
 					<input type="hidden" step=2 ng-model='ctrl2.contract.dueAmount'>
 				</td>
 			</tr>	
@@ -70,8 +73,8 @@
 				<td>
 					<label class="input-group">Due Amount</label>
 				</td>
-				<td>
-					<label>${{ctrl2.contract.dueAmount}}</label>
+				<td >
+					<span class="number-label">${{ctrl2.contract.dueAmount}}</span>
 				</td>
 			</tr>
 							
@@ -82,7 +85,8 @@
 		           ng-model-options="{ updateOn: 'blur' }"
 		           style='margin: 8px 0px;'></textarea>
 			<div class='row clearfix'>
-				<a class='btn btn-success btn-sm'>Create Contract</a>
+				<a class='btn btn-success btn-sm' ng-if='readonly' ng-click='ctrl2.acceptContract()'>Accept Contract</a>
+				<a class='btn btn-success btn-sm' ng-if='!readonly' ng-click='ctrl2.saveContract()'>Create Contract</a>
 				<a class='btn btn-default btn-sm' ng-click='ctrl2.dismiss()'>Cancel</a>
 			</div>			
 		</form>

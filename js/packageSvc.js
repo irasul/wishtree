@@ -40,11 +40,10 @@ app.service('packages',function(){
 				"Full Content provided on an online interactive platform"
 			],			
 			Elite: [
-				"16 hours of Coverage",
+				"18 hours of Coverage",
 				"2 Photographers",
 				"Coverage of Bride and Groom Preparation",
 				"Exclusive Session with Bride and Groom",
-				"Photo Book",
 				"1 Hour E-Shoot",
 				"Full Content provided on an online interactive platform"
 			]
@@ -61,6 +60,7 @@ app.service('packages',function(){
 			Essential:[	
 					"Full Event Coverage", 
 					"1 Cinematographer", 
+					"1 Event Highlight"
 					"Full Content provided on an online interactive platform"
 			],
 			Elite:[
@@ -83,20 +83,20 @@ app.service('packages',function(){
 			],			
 			Luxury: [
 				"8 hours of Coverage",
-				"2 Cinematographer",
+				"2 Cinematographers",
 				"1 Event Highlight",
 				"Full Content provided on an online interactive platform"	
 			],
 			Royalty: [
 				"12 hours of Coverage",
-				"2 Cinematographer",
+				"2 Cinematographers",
 				"1 Event Highlight",
 				"Coverage of Bride and Groom Preparation",
 				"Full Content provided on an online interactive platform"
 			],
 			Elite: [
-				"16 hours of Coverage",
-				"2 Cinematographer",
+				"18 hours of Coverage",
+				"2 Cinematographers",
 				"1 Event Highlight",
 				"Coverage of Bride and Groom Preparation",
 				"Exclusive Session with Bride and Groom",

@@ -8,7 +8,17 @@ app.service('api',function($http){
 				        data: {user:request['u'],pass:request['p']},
 					  });
 	}
-
+	this.getNewContracts = function(){
+		return  [
+							{
+								id:'005',
+								Client: 'ABC',
+								EventDate: '10/10/2017',
+								ContractName: 'ABC - 10/10/2017',
+								Type: 'Photography'
+							}
+						]	
+	}
 	this.getMyContracts = function(){
 		/*using sample data*/
 		return  [
