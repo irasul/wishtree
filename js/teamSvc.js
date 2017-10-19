@@ -20,7 +20,7 @@ Interesting fact about Iftakhar- He drinks orange juice with salt & he loves Mac
 			picUrl   : "img/team/i.jpg",
 
 		},
-		3:{
+		2:{
 			fullname : 'Ashiqul Alam',
 			firstName: 'Ashiqul', 
 			title    : 'Sr. Cinematographer',
@@ -30,7 +30,7 @@ Interesting fact about Iftakhar- He drinks orange juice with salt & he loves Mac
 			picUrl   : "img/team/a.jpg",
 
 		},
-		6:{
+		3:{
 			fullname : 'Kaiser Ahmed',
 			firstName: 'Kaiser', 
 			title    : 'Photographer',
@@ -40,7 +40,7 @@ Interesting fact about Iftakhar- He drinks orange juice with salt & he loves Mac
 			picUrl   : "img/team/k.jpg",
 
 		},
-		7:{
+		4:{
 			fullname : 'Tareq Mohammed',
 			firstName: 'Tareq', 
 			title    : 'Videographer',
@@ -48,7 +48,7 @@ Interesting fact about Iftakhar- He drinks orange juice with salt & he loves Mac
 			picUrl   : "img/team/t.jpg",
 
 		},
-		8:{
+		5:{
 			fullname : 'Hasan Shahryer',
 			firstName: 'Shahryar', 
 			title    : 'Videographer',
@@ -56,7 +56,7 @@ Interesting fact about Iftakhar- He drinks orange juice with salt & he loves Mac
 			picUrl   : "img/team/sh.jpg",
 
 		},
-		5:{
+		6:{
 			fullname : 'Omar Alsayyed',
 			firstName: 'Omar', 
 			title    : 'Photographer',
@@ -66,7 +66,7 @@ Interesting fact about Iftakhar- He drinks orange juice with salt & he loves Mac
 			picUrl   : "img/team/placeholder.png",
 
 		},
-		2:{
+		7:{
 			fullname : 'Yaman Syed',
 			firstName: 'Yaman', 
 			title    : 'Sr. Cinematographer',

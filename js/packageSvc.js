@@ -60,7 +60,7 @@ app.service('packages',function(){
 			Essential:[	
 					"Full Event Coverage", 
 					"1 Cinematographer", 
-					"1 Event Highlight"
+					"1 Event Highlight",
 					"Full Content provided on an online interactive platform"
 			],
 			Elite:[
